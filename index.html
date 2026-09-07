@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="シールドトンネル実務工法・現場OJT技術マニュアル【日中対訳版】。シールド掘進機9大構造、3大基幹技術（製造・組立・品質管理）、全4フェーズ20工程シーケンス、6大工種連携、現場実務会話＆専門用語80選を完全網羅。">
+  <meta property="og:title" content="シールドトンネル技術標準・現場OJT実務マニュアル【日中対訳版】">
+  <meta property="og:description" content="潛盾隧道工程實務：潛盾機解密、核心技術與前後工種全生命週期。中日雙語對照、網頁互動圖解速查版。">
+  <meta property="og:type" content="website">
+  <title>シールドトンネル実務工法：掘進機解剖・基幹技術＆全工種ライフサイクル【日中対訳・現場OJT版】</title>
+  
+  <!-- Allowlisted Google CDN Tailwind -->
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+
+  <style>
+    :root {
+      --bg-main: #0b1329;
+      --bg-card: #132042;
+      --bg-card-hover: #1c2e5c;
+      --border-color: #2a3f75;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      --accent-rose: #f43f5e;
+      --jp-color: #60a5fa;
+      --zh-color: #cbd5e1;
+    }
+
+    .light-theme {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --border-color: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --accent-cyan: #0891b2;
+      --accent-amber: #d97706;
+      --accent-emerald: #059669;
+      --accent-rose: #e11d48;
+      --jp-color: #1d4ed8;
+      --zh-color: #475569;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .blueprint-grid {
+      background-size: 30px 30px;
+      background-image: 
+        linear-gradient(to right, rgba(96, 165, 250, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(96, 165, 250, 0.05) 1px, transparent 1px);
+    }
+
+    .light-theme .blueprint-grid {
+      background-image: 
+        linear-gradient(to right, rgba(148, 163, 184, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.15) 1px, transparent 1px);
+    }
+
+    .custom-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scroll::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.3); border-radius: 9999px; }
+    .custom-scroll::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 184, 0.5); }
+
+    .pulse-glow { animation: pulseGlow 2.5s infinite; }
+    @keyframes pulseGlow {
+      0%, 100% { filter: drop-shadow(0 0 2px rgba(59, 130, 246, 0.6)); }
+      50% { filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.9)); }
+    }
+
+    /* Language display controls */
+    .lang-bilingual .lang-jp { display: block; }
+    .lang-bilingual .lang-zh { display: block; }
+    .lang-jp-only .lang-jp { display: block; }
+    .lang-jp-only .lang-zh { display: none !important; }
+    .lang-zh-only .lang-jp { display: none !important; }
+    .lang-zh-only .lang-zh { display: block; }
+
+    @media print {
+      .no-print { display: none !important; }
+      .tab-panel { display: block !important; margin-bottom: 2rem; page-break-after: always; }
+      body { background: white !important; color: black !important; }
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen p-3 md:p-6 blueprint-grid lang-bilingual">
+
+  <div class="max-w-7xl mx-auto space-y-6">
+
+    <!-- Top Engineering Navigation & Utility Bar -->
+    <header class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-5 md:p-7 shadow-xl backdrop-blur-md">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+        
+        <!-- Left Title Section -->
+        <div class="space-y-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider rounded-md bg-blue-500/15 text-blue-400 border border-blue-500/30">
+              Civil Tunneling Masterclass
+            </span>
+            <span class="px-2.5 py-0.5 text-xs font-bold rounded-md bg-cyan-500/15 text-cyan-400 border border-cyan-500/30">
+              現場 OJT 實務教材
+            </span>
+            <span class="px-2.5 py-0.5 text-xs font-bold rounded-md bg-amber-500/15 text-amber-400 border border-amber-500/30">
+              日中対訳・Web即戦力版
+            </span>
+          </div>
+
+          <!-- Bilingual Header Title -->
+          <h1 class="text-2xl md:text-3xl font-black tracking-tight leading-snug">
+            <span class="lang-jp text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-teal-300">
+              シールドトンネル実務工法：掘進機解剖・基幹技術＆全工種ライフサイクル
+            </span>
+            <span class="lang-zh text-lg md:text-xl font-bold text-slate-300 block mt-1">
+              潛盾隧道工程實務：潛盾機解密、三大核心技術與前後工種全生命週期
+            </span>
+          </h1>
+
+          <p class="text-xs md:text-sm text-[var(--text-muted)] leading-relaxed max-w-4xl">
+            <span class="lang-jp">
+              シールド掘進機（TBM）9大機構解剖、3大基幹技術（製造・組立・品質管理）、発進から到達貫通までの全4フェーズ20工程シーケンス、6大工種連携マトリクス、現場実務対話＆80選用語集を完全網羅。
+            </span>
+            <span class="lang-zh block mt-0.5">
+              涵蓋潛盾機九大系統解剖、製造工藝、重裝下坑、精度品管、發進至貫通全工序銜接、六大工種協同介面與現場中日對照會話及專業詞庫。
+            </span>
+          </p>
+        </div>
+
+        <!-- Right Utility Controls: Language Switch, Theme, Search, Print -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 no-print">
+          
+          <!-- Language Toggle Buttons -->
+          <div class="bg-[var(--bg-main)] p-1 rounded-xl border border-[var(--border-color)] flex items-center shadow-inner">
+            <button onclick="setLang('bilingual')" id="lang-btn-bilingual" class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-blue-600 text-white shadow">
+              🌐 中日雙語
+            </button>
+            <button onclick="setLang('jp')" id="lang-btn-jp" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-[var(--text-muted)] hover:text-white transition-all">
+              🇯🇵 日本語
+            </button>
+            <button onclick="setLang('zh')" id="lang-btn-zh" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-[var(--text-muted)] hover:text-white transition-all">
+              🇹🇼 繁中
+            </button>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button onclick="toggleTheme()" id="theme-btn" class="p-2.5 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)] text-sm hover:border-blue-500 transition-colors flex items-center justify-center" title="切換明暗主題">
+            🌙
+          </button>
+
+          <!-- Print / PDF Button -->
+          <button onclick="window.print()" class="px-3 py-2 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)] text-xs font-semibold text-[var(--text-muted)] hover:text-white hover:border-blue-500 transition-colors flex items-center justify-center gap-1.5" title="列印或匯出 PDF">
+            <span>🖨️</span>
+            <span class="hidden sm:inline">印刷 / PDF</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Ribbon -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mt-6 pt-5 border-t border-[var(--border-color)] text-center text-xs">
+        <div class="p-2.5 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)]">
+          <div class="text-[var(--text-muted)]">掘進機構造</div>
+          <div class="text-base font-extrabold text-blue-400">9 大系統</div>
+        </div>
+        <div class="p-2.5 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)]">
+          <div class="text-[var(--text-muted)]">基幹技術</div>
+          <div class="text-base font-extrabold text-cyan-400">製造・組立・品管</div>
+        </div>
+        <div class="p-2.5 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)]">
+          <div class="text-[var(--text-muted)]">施工全階段</div>
+          <div class="text-base font-extrabold text-emerald-400">4 大フェーズ</div>
+        </div>
+        <div class="p-2.5 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)]">
+          <div class="text-[var(--text-muted)]">標準施工工程</div>
+          <div class="text-base font-extrabold text-amber-400">全 20 工程</div>
+        </div>
+        <div class="p-2.5 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)]">
+          <div class="text-[var(--text-muted)]">連携工種</div>
+          <div class="text-base font-extrabold text-purple-400">6 大工種部門</div>
+        </div>
+        <div class="p-2.5 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)]">
+          <div class="text-[var(--text-muted)]">現場用語庫</div>
+          <div class="text-base font-extrabold text-rose-400">80+ 専門用語</div>
+        </div>
+      </div>
+
+      <!-- Global Search Bar -->
+      <div class="mt-4 relative no-print">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400 text-sm">🔍</span>
+        <input type="text" id="global-search" oninput="handleSearch(this.value)" placeholder="快速搜尋中日術語、工序、設備名稱（例：カッターヘッド、裏込注入、セグメント、管片、千斤頂、破鏡）..." class="w-full bg-[var(--bg-main)] border border-[var(--border-color)] rounded-xl py-2.5 pl-10 pr-4 text-xs md:text-sm text-[var(--text-main)] placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
+        <button onclick="clearSearch()" id="clear-search-btn" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-xs text-slate-400 hover:text-white">✕ 清除</button>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex overflow-x-auto gap-2 mt-4 pt-3 border-t border-[var(--border-color)] custom-scroll no-print">
+        <button id="tab-btn-machine" onclick="switchTab('machine')" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm flex items-center gap-2 whitespace-nowrap transition-all bg-blue-600 text-white shadow-lg shadow-blue-500/20">
+          <span>⚙️ 掘進機解剖 (Machine Anatomy)</span>
+        </button>
+        <button id="tab-btn-tech" onclick="switchTab('tech')" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm flex items-center gap-2 whitespace-nowrap transition-all text-[var(--text-muted)] hover:bg-[var(--bg-card-hover)] hover:text-white">
+          <span>🏭 3大基幹技術 (製造・組立・品管)</span>
+        </button>
+        <button id="tab-btn-sequence" onclick="switchTab('sequence')" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm flex items-center gap-2 whitespace-nowrap transition-all text-[var(--text-muted)] hover:bg-[var(--bg-card-hover)] hover:text-white">
+          <span>🔄 施工順序シーケンス (全20工程)</span>
+        </button>
+        <button id="tab-btn-matrix" onclick="switchTab('matrix')" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm flex items-center gap-2 whitespace-nowrap transition-all text-[var(--text-muted)] hover:bg-[var(--bg-card-hover)] hover:text-white">
+          <span>📋 6大工種連携＆リスク手帳</span>
+        </button>
+        <button id="tab-btn-dialogue" onclick="switchTab('dialogue')" class="tab-btn px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm flex items-center gap-2 whitespace-nowrap transition-all text-[var(--text-muted)] hover:bg-[var(--bg-card-hover)] hover:text-white">
+          <span>🗣️ 現場OJT実務会話＆80選用語集</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Search Results Flyout (shown when searching) -->
+    <div id="search-results-panel" class="hidden bg-[var(--bg-card)] border border-blue-500/50 rounded-2xl p-5 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-[var(--border-color)] pb-2">
+        <h3 class="text-sm font-bold text-blue-400 flex items-center gap-2">
+          <span>🔍 搜尋比對結果 (検索結果)</span>
+          <span id="search-count" class="px-2 py-0.5 rounded-full text-xs bg-blue-500/20 text-blue-300">0 項</span>
+        </h3>
+        <span class="text-xs text-[var(--text-muted)]">點擊即可快速跳轉至對應章節</span>
+      </div>
+      <div id="search-results-list" class="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-96 overflow-y-auto custom-scroll text-xs">
+        <!-- Results injected dynamically -->
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- TAB 1: 掘進機解剖 (SHIELD MACHINE ANATOMY) -->
+    <!-- ============================================================== -->
+    <section id="tab-content-machine" class="tab-panel space-y-6">
+      
+      <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-5 shadow-lg">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
+          <div>
+            <h2 class="text-lg md:text-xl font-extrabold text-[var(--text-main)] flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-blue-500 inline-block pulse-glow"></span>
+              <span class="lang-jp">泥土圧（EPB）・泥水式複合シールド掘進機 断面インタラクティブ構造図</span>
+              <span class="lang-zh block text-sm font-bold text-slate-400">土壓平衡 / 泥水複合型潛盾機 剖面互動技術視圖</span>
+            </h2>
+            <p class="text-xs text-[var(--text-muted)] mt-1">
+              <span class="lang-jp">図中の各番号部または名称をクリックすると、右側の詳細パネルに構造仕様、機能機理、品質管理基準が連動表示されます。</span>
+              <span class="lang-zh block">點選圖中任一編號或部件標籤，右側面板將即時切換該機構之詳細構造、作動原理與品管檢測規範。</span>
+            </p>
+          </div>
+          
+          <!-- Category Legend -->
+          <div class="flex flex-wrap items-center gap-2 text-[11px]">
+            <span class="flex items-center gap-1 px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">
+              <span class="w-2 h-2 rounded-sm bg-blue-500"></span>前端掘削部 (①~②)
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+              <span class="w-2 h-2 rounded-sm bg-indigo-500"></span>動力・排土部 (③~④)
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <span class="w-2 h-2 rounded-sm bg-emerald-500"></span>推進・覆工部 (⑤~⑦)
+            </span>
+            <span class="flex items-center gap-1 px-2 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              <span class="w-2 h-2 rounded-sm bg-amber-500"></span>注入・後続支援 (⑧~⑨)
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          
+          <!-- Left: SVG Technical Machine Cutaway -->
+          <div class="lg:col-span-8 bg-[var(--bg-main)] border border-[var(--border-color)] rounded-xl p-3 overflow-hidden flex flex-col items-center justify-center relative">
+            <div class="w-full overflow-x-auto custom-scroll flex justify-center py-2">
+              <svg viewBox="0 0 980 430" class="w-full max-w-[940px] min-w-[700px] select-none text-xs font-mono">
+                <defs>
+                  <linearGradient id="cutterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3b82f6" />
+                    <stop offset="100%" stop-color="#1d4ed8" />
+                  </linearGradient>
+                  <linearGradient id="shellGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#334155" />
+                    <stop offset="50%" stop-color="#475569" />
+                    <stop offset="100%" stop-color="#1e293b" />
+                  </linearGradient>
+                  <linearGradient id="chamberGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#d97706" stop-opacity="0.25" />
+                    <stop offset="100%" stop-color="#b45309" stop-opacity="0.65" />
+                  </linearGradient>
+                  <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                </defs>
+
+                <!-- Ground / Soil strata background -->
+                <rect x="10" y="30" width="130" height="370" fill="#78350f" opacity="0.15" stroke="#92400e" stroke-dasharray="4" rx="4" />
+                <text x="25" y="55" fill="#f59e0b" font-weight="bold">地山切削前方</text>
+                <text x="25" y="70" fill="#d97706" font-size="10">水土圧平衡ゾーン</text>
+
+                <!-- Excavated tunnel with segment rings -->
+                <g opacity="0.95">
+                  <!-- Segment Ring 1 -->
+                  <rect x="690" y="75" width="50" height="38" fill="#0284c7" stroke="#38bdf8" stroke-width="2" rx="2" />
+                  <rect x="690" y="315" width="50" height="38" fill="#0284c7" stroke="#38bdf8" stroke-width="2" rx="2" />
+                  <!-- Segment Ring 2 -->
+                  <rect x="745" y="75" width="50" height="38" fill="#0284c7" stroke="#38bdf8" stroke-width="2" rx="2" />
+                  <rect x="745" y="315" width="50" height="38" fill="#0284c7" stroke="#38bdf8" stroke-width="2" rx="2" />
+                  <!-- Segment Ring 3 -->
+                  <rect x="800" y="75" width="50" height="38" fill="#0284c7" stroke="#38bdf8" stroke-width="2" rx="2" />
+                  <rect x="800" y="315" width="50" height="38" fill="#0284c7" stroke="#38bdf8" stroke-width="2" rx="2" />
+                  
+                  <!-- Backfill Grout Annular Layer (Tail Void) -->
+                  <rect x="685" y="58" width="170" height="15" fill="#f59e0b" opacity="0.75" />
+                  <rect x="685" y="355" width="170" height="15" fill="#f59e0b" opacity="0.75" />
+                  <text x="700" y="50" fill="#f59e0b" font-size="10" font-weight="bold">同時裏込注入硬化層 (Tail Void Grout)</text>
+                </g>
+
+                <!-- Shield Shell Outer Body -->
+                <!-- Front Shield (前胴) -->
+                <path d="M 140 65 L 290 65 L 290 365 L 140 365 Z" fill="url(#shellGrad)" stroke="#0ea5e9" stroke-width="2" />
+                <text x="180" y="80" fill="#94a3b8" font-size="9">前胴 (Front)</text>
+                
+                <!-- Middle Shield (中胴 - Articulation Joint 屈折部) -->
+                <path d="M 295 65 L 450 65 L 450 365 L 295 365 Z" fill="url(#shellGrad)" stroke="#0ea5e9" stroke-width="2" />
+                <text x="340" y="80" fill="#94a3b8" font-size="9">中胴 (Middle・中折れ)</text>
+
+                <!-- Tail Shield (後胴・テール部) -->
+                <path d="M 455 65 L 680 65 L 680 365 L 455 365 Z" fill="url(#shellGrad)" stroke="#0ea5e9" stroke-width="2" />
+                <text x="530" y="80" fill="#94a3b8" font-size="9">後胴 (Tail Shield)</text>
+
+                <!-- PART 1: CUTTERHEAD (カッターヘッド) -->
+                <g id="svg-cutterhead" onclick="selectPart('cutterhead')" class="cursor-pointer group">
+                  <rect x="115" y="55" width="30" height="320" rx="8" fill="url(#cutterGrad)" stroke="#60a5fa" stroke-width="3" class="group-hover:stroke-cyan-300 transition-colors" />
+                  <!-- Cutters on cutterhead -->
+                  <circle cx="120" cy="95" r="6" fill="#ffffff" stroke="#ef4444" stroke-width="2" />
+                  <circle cx="120" cy="145" r="6" fill="#ffffff" stroke="#ef4444" stroke-width="2" />
+                  <circle cx="120" cy="200" r="8" fill="#facc15" stroke="#000" stroke-width="2" />
+                  <circle cx="120" cy="255" r="6" fill="#ffffff" stroke="#ef4444" stroke-width="2" />
+                  <circle cx="120" cy="305" r="6" fill="#ffffff" stroke="#ef4444" stroke-width="2" />
+                  <!-- Overcutter / Copy Cutter -->
+                  <rect x="110" y="48" width="22" height="12" fill="#ef4444" rx="2" />
+                  <rect x="110" y="370" width="22" height="12" fill="#ef4444" rx="2" />
+                  
+                  <text x="35" y="215" fill="#60a5fa" font-weight="bold" font-size="11">① カッターヘッド</text>
+                  <text x="35" y="230" fill="#93c5fd" font-size="9">刀盤切削機構</text>
+                  <line x1="110" y1="215" x2="70" y2="215" stroke="#60a5fa" stroke-width="1.5" />
+                </g>
+
+                <!-- PART 2: PRESSURE CHAMBER & BULKHEAD (圧力隔壁・チャンバー) -->
+                <g id="svg-chamber" onclick="selectPart('chamber')" class="cursor-pointer group">
+                  <!-- Bulkhead -->
+                  <rect x="250" y="70" width="26" height="290" fill="#0f172a" stroke="#334155" stroke-width="2" />
+                  <!-- Interior Chamber -->
+                  <rect x="148" y="70" width="102" height="290" fill="url(#chamberGrad)" />
+                  <!-- Soil pressure sensors -->
+                  <circle cx="248" cy="125" r="4" fill="#22c55e" />
+                  <circle cx="248" cy="215" r="4" fill="#22c55e" />
+                  <circle cx="248" cy="305" r="4" fill="#22c55e" />
+                  <text x="155" y="115" fill="#f59e0b" font-weight="bold" font-size="11">② チャンバー</text>
+                  <text x="155" y="130" fill="#fbbf24" font-size="9">圧力隔壁・土圧室</text>
+                </g>
+
+                <!-- PART 3: MAIN DRIVE & BEARING (メインドライブ・主軸受) -->
+                <g id="svg-maindrive" onclick="selectPart('maindrive')" class="cursor-pointer group">
+                  <circle cx="278" cy="215" r="32" fill="#1e293b" stroke="#f59e0b" stroke-width="3" stroke-dasharray="4" />
+                  <circle cx="278" cy="215" r="16" fill="#0284c7" />
+                  <!-- Drive Motors -->
+                  <rect x="282" y="130" width="40" height="22" rx="3" fill="#6366f1" stroke="#a5b4fc" stroke-width="1.5" />
+                  <rect x="282" y="280" width="40" height="22" rx="3" fill="#6366f1" stroke="#a5b4fc" stroke-width="1.5" />
+                  <text x="255" y="335" fill="#818cf8" font-weight="bold" font-size="10">③ メインドライブ</text>
+                  <text x="255" y="348" fill="#c7d2fe" font-size="9">主軸受・モーター</text>
+                </g>
+
+                <!-- PART 4: SCREW CONVEYOR (スクリューコンベア) -->
+                <g id="svg-screw" onclick="selectPart('screw')" class="cursor-pointer group">
+                  <path d="M 180 345 L 440 235 L 452 255 L 192 365 Z" fill="#334155" stroke="#0f172a" stroke-width="2" />
+                  <!-- Screw flights -->
+                  <line x1="210" y1="335" x2="230" y2="355" stroke="#f8fafc" stroke-width="2" />
+                  <line x1="250" y1="315" x2="270" y2="335" stroke="#f8fafc" stroke-width="2" />
+                  <line x1="290" y1="295" x2="310" y2="315" stroke="#f8fafc" stroke-width="2" />
+                  <line x1="330" y1="275" x2="350" y2="295" stroke="#f8fafc" stroke-width="2" />
+                  <line x1="370" y1="255" x2="390" y2="275" stroke="#f8fafc" stroke-width="2" />
+                  <!-- Discharge Gate -->
+                  <rect x="435" y="225" width="25" height="40" fill="#ef4444" rx="2" />
+                  <text x="310" y="245" fill="#f87171" font-weight="bold" font-size="10">④ スクリューコンベア</text>
+                  <text x="310" y="258" fill="#fca5a5" font-size="8">排土機・プラグ効果</text>
+                </g>
+
+                <!-- PART 5: THRUST JACK SYSTEM (シールドジャッキ群) -->
+                <g id="svg-jacks" onclick="selectPart('jacks')" class="cursor-pointer group">
+                  <!-- Upper Jack -->
+                  <rect x="380" y="80" width="85" height="18" fill="#059669" stroke="#34d399" stroke-width="2" rx="3" />
+                  <rect x="465" y="85" width="70" height="8" fill="#94a3b8" stroke="#475569" stroke-width="1.5" />
+                  <!-- Lower Jack -->
+                  <rect x="380" y="332" width="85" height="18" fill="#059669" stroke="#34d399" stroke-width="2" rx="3" />
+                  <rect x="465" y="337" width="70" height="8" fill="#94a3b8" stroke="#475569" stroke-width="1.5" />
+                  <text x="370" y="118" fill="#34d399" font-weight="bold" font-size="10">⑤ シールドジャッキ</text>
+                  <text x="370" y="130" fill="#6ee7b7" font-size="8">推進千斤頂群</text>
+                </g>
+
+                <!-- PART 6: SEGMENT ERECTOR (セグメントエレクター) -->
+                <g id="svg-erector" onclick="selectPart('erector')" class="cursor-pointer group">
+                  <rect x="540" y="155" width="30" height="120" rx="6" fill="#7c3aed" stroke="#a78bfa" stroke-width="2" />
+                  <circle cx="555" cy="215" r="12" fill="#ffffff" stroke="#7c3aed" stroke-width="2" />
+                  <!-- Erector Pick-up Head -->
+                  <rect x="580" y="95" width="45" height="24" fill="#a855f7" stroke="#c084fc" stroke-width="2" rx="3" />
+                  <line x1="555" y1="155" x2="590" y2="119" stroke="#a78bfa" stroke-width="3" />
+                  <text x="490" y="150" fill="#c084fc" font-weight="bold" font-size="10">⑥ セグメントエレクター</text>
+                  <text x="490" y="163" fill="#e9d5ff" font-size="8">真円組立ロボット手</text>
+                </g>
+
+                <!-- PART 7: TAIL BRUSH SEALS (3重テールシールブラシ) -->
+                <g id="svg-tailseal" onclick="selectPart('tailseal')" class="cursor-pointer group">
+                  <!-- Upper Brushes -->
+                  <line x1="620" y1="67" x2="620" y2="81" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+                  <line x1="640" y1="67" x2="640" y2="81" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+                  <line x1="660" y1="67" x2="660" y2="81" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+                  <!-- Lower Brushes -->
+                  <line x1="620" y1="349" x2="620" y2="363" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+                  <line x1="640" y1="349" x2="640" y2="363" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+                  <line x1="660" y1="349" x2="660" y2="363" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+                  <text x="580" y="45" fill="#fbbf24" font-weight="bold" font-size="10">⑦ 3重テールシールブラシ</text>
+                  <text x="580" y="58" fill="#fde68a" font-size="8">三重鋼絲刷・グリース充填</text>
+                </g>
+
+                <!-- PART 8: BACKFILL GROUT PIPE (同時裏込注入管路) -->
+                <g id="svg-grouting" onclick="selectPart('grouting')" class="cursor-pointer group">
+                  <path d="M 450 365 L 675 365" fill="none" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+                  <circle cx="675" cy="365" r="5" fill="#ef4444" />
+                  <text x="545" y="390" fill="#f87171" font-weight="bold" font-size="10">⑧ 同時裏込注入管路</text>
+                  <text x="545" y="403" fill="#fca5a5" font-size="8">同步注漿・A+B液混合</text>
+                </g>
+
+                <!-- PART 9: BACKUP GANTRY SYSTEM (後続台車バックアップシステム) -->
+                <g id="svg-gantry" onclick="selectPart('gantry')" class="cursor-pointer group">
+                  <rect x="720" y="175" width="220" height="90" fill="#0f172a" rx="6" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3" />
+                  <text x="735" y="198" fill="#38bdf8" font-weight="bold" font-size="11">⑨ 後続台車 (1~5号車)</text>
+                  <text x="735" y="215" fill="#94a3b8" font-size="9">• 油圧・変電プラント (Power Station)</text>
+                  <text x="735" y="230" fill="#94a3b8" font-size="9">• オペレーター制御室 (Control Cabin)</text>
+                  <text x="735" y="245" fill="#94a3b8" font-size="9">• モルタル槽・軌道車牽引基地</text>
+                </g>
+
+                <!-- Dimensions & Axis Indicators -->
+                <line x1="140" y1="410" x2="680" y2="410" stroke="#64748b" stroke-width="1" />
+                <text x="380" y="425" fill="#64748b" text-anchor="middle" font-size="10">シールド掘進機 本機長 (機長 L ≈ 8.5m ~ 11.5m, 1.2~1.5D)</text>
+              </svg>
+            </div>
+            
+            <div class="mt-2 text-xs text-[var(--text-muted)] flex items-center gap-2">
+              <span class="inline-block w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
+              <span>ヒント：図中の番号部（①〜⑨）をクリックすると、右側の技術カードが連動更新されます。</span>
+            </div>
+          </div>
+
+          <!-- Right: Component Details Panel (Bilingual Inspector) -->
+          <div class="lg:col-span-4 bg-[var(--bg-main)] border border-[var(--border-color)] rounded-xl p-5 space-y-4 shadow-md">
+            
+            <!-- Component Header -->
+            <div class="flex items-start justify-between border-b border-[var(--border-color)] pb-3">
+              <div class="flex items-center gap-3">
+                <span id="comp-icon" class="text-3xl font-black text-blue-400">①</span>
+                <div>
+                  <h3 id="comp-title-jp" class="font-extrabold text-base text-blue-300">カッターヘッド切削機構 (Cutterhead)</h3>
+                  <h4 id="comp-title-zh" class="font-bold text-xs text-slate-400">刀盤切削系統</h4>
+                  <span id="comp-category" class="text-[11px] px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 font-semibold inline-block mt-1">掘削・切削コア</span>
+                </div>
+              </div>
+              <span id="comp-tag" class="text-xs px-2.5 py-1 rounded-full bg-blue-500/15 text-blue-400 font-mono font-bold">FRONT-01</span>
+            </div>
+
+            <!-- Structure & Specs -->
+            <div class="space-y-1">
+              <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider flex items-center gap-1">
+                <span>📐</span> 構造形式・仕様 (構造形式與配置)
+              </div>
+              <p id="comp-structure" class="text-xs leading-relaxed text-[var(--text-main)]"></p>
+            </div>
+
+            <!-- Main Engineering Function -->
+            <div class="space-y-1">
+              <div class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1">
+                <span>⚙️</span> 主要機能・作動原理 (主要功能與運作機理)
+              </div>
+              <p id="comp-function" class="text-xs leading-relaxed text-[var(--text-main)]"></p>
+            </div>
+
+            <!-- Quality & Maintenance Checklist -->
+            <div class="space-y-1">
+              <div class="text-[11px] font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1">
+                <span>🛡️</span> 品質管理・点検保守 (QA/QC 與現場保養)
+              </div>
+              <div id="comp-qa" class="text-xs leading-relaxed text-[var(--text-main)] space-y-1"></div>
+            </div>
+
+            <!-- Site Terms -->
+            <div class="pt-2 border-t border-[var(--border-color)]">
+              <div class="text-[11px] font-bold text-purple-400 uppercase tracking-wider mb-1">
+                🗣️ 現場実務日中対照用語
+              </div>
+              <div id="comp-terms" class="flex flex-wrap gap-1.5 text-[11px]"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- TAB 2: 3大基幹技術 (CORE TECHNOLOGIES: MFG, ASSEMBLY, QA) -->
+    <!-- ============================================================== -->
+    <section id="tab-content-tech" class="tab-panel space-y-6 hidden">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <!-- Tech 1: 工場精密製造・仮組立 -->
+        <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-5 shadow-lg space-y-4">
+          <div class="flex items-center justify-between border-b border-[var(--border-color)] pb-3">
+            <div>
+              <span class="text-xs font-bold text-blue-400 uppercase">基幹技術 01</span>
+              <h3 class="font-extrabold text-base text-[var(--text-main)]">
+                <span class="lang-jp">工場精密製造＆仮組立検査</span>
+                <span class="lang-zh block text-xs text-slate-400 font-bold">工廠精密加工與假組裝驗收 (FAT)</span>
+              </h3>
+            </div>
+            <span class="text-2xl">🏭</span>
+          </div>
+
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div>
+              <strong class="text-blue-400 block mb-1">1. シールド胴体真円度＆中折れシール</strong>
+              <p class="text-[var(--text-muted)]">
+                前胴・中胴・後胴の大型厚板圧延・溶接構造物。レーザートラッカーによる真円度公差（±2mm以内）計測、中折れアーティキュレーション部（Articulation Seal）の高圧水密試験（0.8MPa維持）。
+              </p>
+            </div>
+            <div>
+              <strong class="text-blue-400 block mb-1">2. メインドライブ主軸受ギヤボックス加工</strong>
+              <p class="text-[var(--text-muted)]">
+                数メートルの大径3列円筒ころ主軸受（Main Bearing）座の精密ボーリング加工。ピッチ円誤差、バックラッシュ（Backlash）管理及び4重リップシール（Lip Seals）気密加圧テスト。
+              </p>
+            </div>
+            <div>
+              <strong class="text-blue-400 block mb-1">3. カッターヘッド動バランス＆無負荷試運転</strong>
+              <p class="text-[var(--text-muted)]">
+                面板式/スポーク式カッターヘッドの耐摩耗肉盛溶接（Hardfacing）。工場内での無負荷連続回転試験（72時間）、油圧モータ同期トルク及び減速機振動・温度測定。
+              </p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl bg-[var(--bg-main)] border border-blue-500/30 text-[11px] space-y-1">
+            <span class="font-bold text-blue-400">📋 FAT 工場立会検査項目 (Factory Acceptance Test)：</span>
+            <ul class="list-disc list-inside text-[var(--text-muted)] space-y-0.5">
+              <li>機体外径寸法及びテーパー角測定</li>
+              <li>エレクター6自由度動作ストローク試験</li>
+              <li>非常停止・インターロック電気保全確認</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tech 2: 現場重機建込み・立坑内本組立 -->
+        <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-5 shadow-lg space-y-4">
+          <div class="flex items-center justify-between border-b border-[var(--border-color)] pb-3">
+            <div>
+              <span class="text-xs font-bold text-cyan-400 uppercase">基幹技術 02</span>
+              <h3 class="font-extrabold text-base text-[var(--text-main)]">
+                <span class="lang-jp">現場重機建込み＆立坑内本組立</span>
+                <span class="lang-zh block text-xs text-slate-400 font-bold">工地超重吊裝與立坑組裝工藝</span>
+              </h3>
+            </div>
+            <span class="text-2xl">🏗️</span>
+          </div>
+
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div>
+              <strong class="text-cyan-400 block mb-1">1. 超大型クローラクレーン相吊り反転吊降ろし</strong>
+              <p class="text-[var(--text-muted)]">
+                主吊り 500t~800t クローラークレーン＋補佐 250t クレーンによる中折れ胴体・カッターヘッドの空中90度反転。吊りピース（Lifting Lug）の超音波探傷（UT）及び地耐力確認。
+              </p>
+            </div>
+            <div>
+              <strong class="text-cyan-400 block mb-1">2. 発進台（架台）据付け＆三次元位置決め</strong>
+              <p class="text-[var(--text-muted)]">
+                発進立坑底版上に高耐力鋼製架台をアンカー固定。推進軸線（DTA）に合わせ、高低差・左右偏位・勾配角をミリ単位（±1mm以内）で高精度トータルステーション調整。
+              </p>
+            </div>
+            <div>
+              <strong class="text-cyan-400 block mb-1">3. 胴体ブロック円周溶接＆内部機器艤装</strong>
+              <p class="text-[var(--text-muted)]">
+                前胴・中胴・後胴の分割継手完全溶接（フルペネ溶接＋RT/UT検査）。推進ジャッキ群、スクリューコンベア、エレクター及び高圧油圧配管・幹線ケーブルの坑内結線。
+              </p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl bg-[var(--bg-main)] border border-cyan-500/30 text-[11px] space-y-1">
+            <span class="font-bold text-cyan-400">⚠️ 現場建込み安全管理ポイント：</span>
+            <ul class="list-disc list-inside text-[var(--text-muted)] space-y-0.5">
+              <li>強風時（風速 10m/s 以上）の揚重作業中断</li>
+              <li>立坑開口部への落下防止養生・立入禁止処置</li>
+              <li>ワイヤーロープ・シャックルの破断荷重安全率 6.0 以上</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tech 3: 推進姿勢誘導・総合品質管理 -->
+        <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-5 shadow-lg space-y-4">
+          <div class="flex items-center justify-between border-b border-[var(--border-color)] pb-3">
+            <div>
+              <span class="text-xs font-bold text-emerald-400 uppercase">基幹技術 03</span>
+              <h3 class="font-extrabold text-base text-[var(--text-main)]">
+                <span class="lang-jp">推進姿勢誘導＆総合品質管理</span>
+                <span class="lang-zh block text-xs text-slate-400 font-bold">雷射導向與幾何姿態綜合品管</span>
+              </h3>
+            </div>
+            <span class="text-2xl">🎯</span>
+          </div>
+
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div>
+              <strong class="text-emerald-400 block mb-1">1. 自動レーザーターゲット＆ジャイロステーション</strong>
+              <p class="text-[var(--text-muted)]">
+                坑内後方既設セグメントに設置した自動追尾トータルステーションからシールド内アクティブターゲット（ELS）へレーザー照射。ピッチング・ローリング・ヨーイングをリアルタイム演算。
+              </p>
+            </div>
+            <div>
+              <strong class="text-emerald-400 block mb-1">2. 設計線形（DTA）偏差追従＆ジャッキストローク差制御</strong>
+              <p class="text-[var(--text-muted)]">
+                計画線形からの偏位を ±50mm 以内に厳格管理。曲線部や蛇行修正時には、左右・上下グループジャッキの油圧比例バルブを調整し、ストローク差によるスムーズな曲線偏角を付与。
+              </p>
+            </div>
+            <div>
+              <strong class="text-emerald-400 block mb-1">3. 地表面沈下モニタリング連動（自動警報）</strong>
+              <p class="text-[var(--text-muted)]">
+                直上構造物・重要埋設管路の自動変位計測。切削土量管理（掘削体積比 98%~102%）と同時裏込注入圧力を連動させ、地表沈下量 < 10mm に抑制。
+              </p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl bg-[var(--bg-main)] border border-emerald-500/30 text-[11px] space-y-1">
+            <span class="font-bold text-emerald-400">📏 許容公差管理基準 (Tolerances)：</span>
+            <ul class="list-disc list-inside text-[var(--text-muted)] space-y-0.5">
+              <li>トンネル中心線偏差：平面 ±50mm / 縦断 ±50mm</li>
+              <li>セグメント目違い（隣接ピース段差）：≤ 5mm</li>
+              <li>セグメント真円度（長径と短径の差）：≤ 0.5% D</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- TAB 3: 施工順序シーケンス (SEQUENTIAL WORKFLOW 20 STEPS) -->
+    <!-- ============================================================== -->
+    <section id="tab-content-sequence" class="tab-panel space-y-6 hidden">
+      
+      <!-- Phase Stepper Control Buttons -->
+      <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-4 shadow-lg">
+        <div class="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider mb-3">
+          施工全4フェーズ切替 (4-Phase Lifecycle Selector)：
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <button onclick="selectPhase(1)" id="phase-btn-1" class="phase-btn p-3 rounded-xl border border-blue-500 bg-blue-500/15 text-blue-400 font-extrabold text-left transition-all shadow">
+            <div class="text-[11px] opacity-80">フェーズ 1 (工程 01~06)</div>
+            <div class="text-xs md:text-sm">発進前準備・地盤改良工</div>
+            <div class="text-[10px] text-slate-400 lang-zh">發進前置土建與地盤改良</div>
+          </button>
+          <button onclick="selectPhase(2)" id="phase-btn-2" class="phase-btn p-3 rounded-xl border border-[var(--border-color)] text-[var(--text-muted)] font-extrabold text-left transition-all hover:bg-[var(--bg-card-hover)]">
+            <div class="text-[11px] opacity-80">フェーズ 2 (工程 07~11)</div>
+            <div class="text-xs md:text-sm">発進鏡切り・初期掘進工</div>
+            <div class="text-[10px] text-slate-400 lang-zh">發進破鏡與初期掘進</div>
+          </button>
+          <button onclick="selectPhase(3)" id="phase-btn-3" class="phase-btn p-3 rounded-xl border border-[var(--border-color)] text-[var(--text-muted)] font-extrabold text-left transition-all hover:bg-[var(--bg-card-hover)]">
+            <div class="text-[11px] opacity-80">フェーズ 3 (工程 12~16)</div>
+            <div class="text-xs md:text-sm">本掘進・サイクル施工工</div>
+            <div class="text-[10px] text-slate-400 lang-zh">常態掘進作業循環</div>
+          </button>
+          <button onclick="selectPhase(4)" id="phase-btn-4" class="phase-btn p-3 rounded-xl border border-[var(--border-color)] text-[var(--text-muted)] font-extrabold text-left transition-all hover:bg-[var(--bg-card-hover)]">
+            <div class="text-[11px] opacity-80">フェーズ 4 (工程 17~20)</div>
+            <div class="text-xs md:text-sm">到達貫通・解体撤去・後続工</div>
+            <div class="text-[10px] text-slate-400 lang-zh">到達貫通、解體與後續結構</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Detailed Phase Content Display Container -->
+      <div id="phase-content-area" class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6 shadow-xl space-y-6">
+        <!-- Injected via JavaScript -->
+      </div>
+
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- TAB 4: 6大工種連携＆リスク手帳 (MULTI-TRADE MATRIX & RISKS) -->
+    <!-- ============================================================== -->
+    <section id="tab-content-matrix" class="tab-panel space-y-6 hidden">
+      
+      <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-5 shadow-lg space-y-4">
+        <div>
+          <h2 class="text-lg md:text-xl font-black text-[var(--text-main)]">
+            <span class="lang-jp">シールドトンネル 6大基幹工種 連携インターフェースマトリクス</span>
+            <span class="lang-zh block text-sm font-bold text-slate-400">潛盾隧道工程 六大核心工種協同介面與重大風險防範矩陣</span>
+          </h2>
+          <p class="text-xs text-[var(--text-muted)] mt-1">
+            シールド施工は環環相扣の完全流水線作業です。上流工程から下流工程への情報伝達ミスや施工遅延は、直ちに全線の停止および重大事故に直結します。
+          </p>
+        </div>
+
+        <div class="overflow-x-auto custom-scroll">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr class="border-b border-[var(--border-color)] bg-[var(--bg-main)] text-[var(--text-main)] font-extrabold">
+                <th class="p-3 w-44">工種部門 (Trade)</th>
+                <th class="p-3">中核施工任務 (Core Duty)</th>
+                <th class="p-3">前工程からの受入れ (Upstream Handoff)</th>
+                <th class="p-3">後工程への引渡し (Downstream Deliverable)</th>
+                <th class="p-3 text-rose-400">重大施工リスク＆防止対策 (Risk & Mitigation)</th>
+              </tr>
+            </thead>
+            <tbody id="matrix-table-body" class="divide-y divide-[var(--border-color)] text-[var(--text-muted)]">
+              <!-- Dynamically populated or rendered -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Quick Backfill Grouting Volume Calculator -->
+      <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-5 shadow-lg space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[var(--border-color)] pb-3">
+          <h3 class="font-extrabold text-sm md:text-base text-[var(--text-main)] flex items-center gap-2">
+            <span>🧮</span>
+            <span class="lang-jp">現場実務速算：テールボイド理論空隙＆同時裏込注入量計算機</span>
+            <span class="lang-zh block text-xs text-slate-400 font-bold">現場實用工程速算：盾尾建築間隙與背填灌漿量計算器</span>
+          </h3>
+          <span class="text-xs text-cyan-400 font-mono">公式：Q = (π/4) × (D² - d²) × B × α</span>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+          <div class="p-3 bg-[var(--bg-main)] rounded-xl border border-[var(--border-color)]">
+            <label class="block text-[var(--text-muted)] font-semibold mb-1">
+              掘進機外径 D (m) [外徑]:
+            </label>
+            <input id="calc-D" type="number" step="0.01" value="6.47" class="w-full bg-[var(--bg-card)] border border-[var(--border-color)] rounded-lg p-2 font-mono font-bold text-blue-400 focus:outline-none focus:border-blue-500" oninput="calcGrout()">
+            <span class="text-[10px] text-slate-500 block mt-1">シールド外径（例：6.47m）</span>
+          </div>
+
+          <div class="p-3 bg-[var(--bg-main)] rounded-xl border border-[var(--border-color)]">
+            <label class="block text-[var(--text-muted)] font-semibold mb-1">
+              セグメント外径 d (m) [管片外徑]:
+            </label>
+            <input id="calc-d" type="number" step="0.01" value="6.20" class="w-full bg-[var(--bg-card)] border border-[var(--border-color)] rounded-lg p-2 font-mono font-bold text-cyan-400 focus:outline-none focus:border-blue-500" oninput="calcGrout()">
+            <span class="text-[10px] text-slate-500 block mt-1">覆工リング外径（例：6.20m）</span>
+          </div>
+
+          <div class="p-3 bg-[var(--bg-main)] rounded-xl border border-[var(--border-color)]">
+            <label class="block text-[var(--text-muted)] font-semibold mb-1">
+              セグメント幅 B (m) [管片環寬]:
+            </label>
+            <input id="calc-B" type="number" step="0.01" value="1.20" class="w-full bg-[var(--bg-card)] border border-[var(--border-color)] rounded-lg p-2 font-mono font-bold text-emerald-400 focus:outline-none focus:border-blue-500" oninput="calcGrout()">
+            <span class="text-[10px] text-slate-500 block mt-1">1リング推進長（例：1.20m/1.50m）</span>
+          </div>
+
+          <div class="p-3 bg-[var(--bg-main)] rounded-xl border border-[var(--border-color)]">
+            <label class="block text-[var(--text-muted)] font-semibold mb-1">
+              注入率 α (注入倍率 1.3~1.8):
+            </label>
+            <input id="calc-alpha" type="number" step="0.05" value="1.50" class="w-full bg-[var(--bg-card)] border border-[var(--border-color)] rounded-lg p-2 font-mono font-bold text-amber-400 focus:outline-none focus:border-blue-500" oninput="calcGrout()">
+            <span class="text-[10px] text-slate-500 block mt-1">地層逸走・充填率を考慮（通常 150%）</span>
+          </div>
+        </div>
+
+        <div class="p-4 bg-[var(--bg-main)] rounded-xl border border-[var(--border-color)] flex flex-wrap items-center justify-between gap-4 text-xs">
+          <div class="space-y-0.5">
+            <span class="text-[var(--text-muted)]">理論テールボイド体積 (V0)：</span>
+            <div class="text-base font-black text-blue-400"><span id="res-v0">3.22</span> m³ / リング</div>
+          </div>
+          <div class="space-y-0.5">
+            <span class="text-[var(--text-muted)]">実計画注入量 (Q = V0 × α)：</span>
+            <div class="text-xl font-black text-emerald-400"><span id="res-q">4.83</span> m³ / リング (約 <span id="res-liters">4,830</span> L)</div>
+          </div>
+          <div class="text-[11px] text-[var(--text-muted)] max-w-sm">
+            💡 注記：A液（特殊水ガラス系）とB液（セメント系懸濁液）の混合比（通常 1:1）に応じて、各タンク注入量を均等供給してください。
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- TAB 5: 現場OJT実務会話＆80選用語集 (DIALOGUES & GLOSSARY) -->
+    <!-- ============================================================== -->
+    <section id="tab-content-dialogue" class="tab-panel space-y-6 hidden">
+      
+      <!-- Part A: 現場実務対話 (Practical Site Dialogues) -->
+      <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-5 shadow-lg space-y-4">
+        <div class="border-b border-[var(--border-color)] pb-3">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">OJT 現場即戦力会話</span>
+          <h2 class="text-lg md:text-xl font-black text-[var(--text-main)]">
+            <span class="lang-jp">現場キーマン実務対話シナリオ 4選（所長・機長・通訳・技術員）</span>
+            <span class="lang-zh block text-xs font-bold text-slate-400">現場重點實務情境對話 4 大範例（日籍所長・機長・口譯・現場工程師）</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- Dialogue 1 -->
+          <div class="p-4 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)] space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-500/20 text-blue-300">SCENE 1: 発進鏡切り前点検</span>
+              <span class="text-[10px] text-slate-400">立坑坑口</span>
+            </div>
+            <div class="space-y-2 text-xs">
+              <div class="p-2 rounded-lg bg-blue-950/40 border border-blue-800/40">
+                <strong class="text-blue-400">🇯🇵 日籍所長：</strong>
+                <p class="text-slate-200 mt-0.5 font-medium">「エントランスシールのエアバッグ空気圧とテールシールグリースの充填圧力は確認しましたか？鏡切り直後の出水は絶対に許されません。」</p>
+                <p class="text-slate-400 text-[11px] mt-1 lang-zh">（洞口止水氣囊氣壓和盾尾密封油脂充填壓力確認了嗎？破鏡瞬間絕對不允許發生漏水。）</p>
+              </div>
+              <div class="p-2 rounded-lg bg-slate-900/60 border border-slate-800">
+                <strong class="text-emerald-400">🇹🇼 台籍工程師/口譯：</strong>
+                <p class="text-slate-200 mt-0.5 font-medium">「はい、エアバッグ圧は 0.4MPa で保持確認済みです。鏡面削孔水圧テストでも異常湧水はありません。」</p>
+                <p class="text-slate-400 text-[11px] mt-1 lang-zh">（是的，氣囊壓力已確認維持在 0.4MPa。鏡面探水鑽孔水壓測試亦無異常湧水。）</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dialogue 2 -->
+          <div class="p-4 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)] space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300">SCENE 2: 掘進中土圧低下・トルク異常</span>
+              <span class="text-[10px] text-slate-400">中央制御室</span>
+            </div>
+            <div class="space-y-2 text-xs">
+              <div class="p-2 rounded-lg bg-amber-950/40 border border-amber-800/40">
+                <strong class="text-amber-400">🇯🇵 機長オペレーター：</strong>
+                <p class="text-slate-200 mt-0.5 font-medium">「チャンバー土圧が 120kPa まで急激にドロップしました！カッタートルクも跳ね上がっています。直ちに推進を停止します。」</p>
+                <p class="text-slate-400 text-[11px] mt-1 lang-zh">（開挖艙土壓驟降至 120kPa！刀盤扭矩也異常飆高。立即停止推進！）</p>
+              </div>
+              <div class="p-2 rounded-lg bg-slate-900/60 border border-slate-800">
+                <strong class="text-cyan-400">🇹🇼 技術指導員：</strong>
+                <p class="text-slate-200 mt-0.5 font-medium">「スクリューゲートを即刻全閉にして！起泡剤（フォーム）の注入圧を 0.25MPa に昇圧し、チャンバー内土圧の復帰を図ってください。」</p>
+                <p class="text-slate-400 text-[11px] mt-1 lang-zh">（立即將螺旋出土閘門完全關閉！將泡沫劑注入壓力提升至 0.25MPa，全力恢復艙內土壓平衡。）</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dialogue 3 -->
+          <div class="p-4 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)] space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-indigo-500/20 text-indigo-300">SCENE 3: セグメント目違い・止水不良</span>
+              <span class="text-[10px] text-slate-400">テール部</span>
+            </div>
+            <div class="space-y-2 text-xs">
+              <div class="p-2 rounded-lg bg-indigo-950/40 border border-indigo-800/40">
+                <strong class="text-indigo-400">🇯🇵 坑内主任：</strong>
+                <p class="text-slate-200 mt-0.5 font-medium">「B2ピースとKピースの継手に 6mm の段差（目違い）が生じています！シール材の噛み込みを防ぐため、エレクターで微調整し直してください。」</p>
+                <p class="text-slate-400 text-[11px] mt-1 lang-zh">（B2 塊與 K 塊接縫處產生 6mm 錯台！為防止擠爛止水膠條，請操作拼裝機重新微調對正。）</p>
+              </div>
+              <div class="p-2 rounded-lg bg-slate-900/60 border border-slate-800">
+                <strong class="text-emerald-400">🇹🇼 拼裝領班：</strong>
+                <p class="text-slate-200 mt-0.5 font-medium">「了解しました。Kピースを一度引き戻し、ガイドピンを点検の上、斜めボルトのトルクレンチで均等に締め直します。」</p>
+                <p class="text-slate-400 text-[11px] mt-1 lang-zh">（了解。先將 K 塊後退並檢查定位插銷，隨後使用扭力扳手均勻鎖緊斜向螺栓。）</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dialogue 4 -->
+          <div class="p-4 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)] space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300">SCENE 4: 同時裏込注入圧力管理</span>
+              <span class="text-[10px] text-slate-400">後続台車・注入ステーション</span>
+            </div>
+            <div class="space-y-2 text-xs">
+              <div class="p-2 rounded-lg bg-emerald-950/40 border border-emerald-800/40">
+                <strong class="text-emerald-400">🇯🇵 注入技術者：</strong>
+                <p class="text-slate-200 mt-0.5 font-medium">「現在、テール注入圧が 0.35MPa、累積注入量が計画値の 140% に達しました。地表面隆起計は正常ですか？」</p>
+                <p class="text-slate-400 text-[11px] mt-1 lang-zh">（目前盾尾注漿壓力為 0.35MPa，累積注入量達到計劃值的 140%。地表隆起監測儀正常嗎？）</p>
+              </div>
+              <div class="p-2 rounded-lg bg-slate-900/60 border border-slate-800">
+                <strong class="text-blue-400">🇹🇼 測量監控組：</strong>
+                <p class="text-slate-200 mt-0.5 font-medium">「直上の地表面変位は +1.5mm で安定しています。注入ポンプの配管逆洗バルブを開き、管路詰まりを予防してください。」</p>
+                <p class="text-slate-400 text-[11px] mt-1 lang-zh">（直上方地表變位為 +1.5mm，處於穩定範圍。請開啟注漿泵逆洗閥，預防管路堵塞。）</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Part B: 80+ 専門用語日中対訳集 (Searchable Bilingual Glossary) -->
+      <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-5 shadow-lg space-y-4">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[var(--border-color)] pb-3">
+          <div>
+            <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">専門用語 80選集</span>
+            <h2 class="text-lg md:text-xl font-black text-[var(--text-main)]">
+              <span class="lang-jp">シールドトンネル現場 日中英 専門用語集（検索・分類フィルター付き）</span>
+              <span class="lang-zh block text-xs font-bold text-slate-400">潛盾隧道工程 中日英 專業對照辭典（支援即時檢索與分類）</span>
+            </h2>
+          </div>
+
+          <!-- Glossary Category Filter Buttons -->
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <button onclick="filterGlossary('all')" class="gloss-filter-btn px-2.5 py-1 rounded-lg bg-blue-600 text-white font-semibold">全部 (All)</button>
+            <button onclick="filterGlossary('machine')" class="gloss-filter-btn px-2.5 py-1 rounded-lg bg-[var(--bg-main)] text-[var(--text-muted)] border border-[var(--border-color)] hover:text-white">掘進機構造</button>
+            <button onclick="filterGlossary('civil')" class="gloss-filter-btn px-2.5 py-1 rounded-lg bg-[var(--bg-main)] text-[var(--text-muted)] border border-[var(--border-color)] hover:text-white">土建・立坑</button>
+            <button onclick="filterGlossary('segment')" class="gloss-filter-btn px-2.5 py-1 rounded-lg bg-[var(--bg-main)] text-[var(--text-muted)] border border-[var(--border-color)] hover:text-white">セグメント・裏込</button>
+            <button onclick="filterGlossary('survey')" class="gloss-filter-btn px-2.5 py-1 rounded-lg bg-[var(--bg-main)] text-[var(--text-muted)] border border-[var(--border-color)] hover:text-white">測量・品管安全</button>
+          </div>
+        </div>
+
+        <!-- Glossary Table -->
+        <div class="overflow-x-auto custom-scroll">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr class="border-b border-[var(--border-color)] bg-[var(--bg-main)] text-[var(--text-main)] font-extrabold">
+                <th class="p-3 w-12">No.</th>
+                <th class="p-3 w-56 text-blue-400">日本語 (読み/ローマ字)</th>
+                <th class="p-3 w-56 text-slate-300">繁體中文 (台灣標準工程名稱)</th>
+                <th class="p-3 w-48 text-cyan-400">English Term</th>
+                <th class="p-3">現場実務解説 (說明與重點)</th>
+              </tr>
+            </thead>
+            <tbody id="glossary-table-body" class="divide-y divide-[var(--border-color)] text-[var(--text-muted)]">
+              <!-- Dynamically populated from JS array -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-xs text-[var(--text-muted)] py-6 border-t border-[var(--border-color)] space-y-1">
+      <div class="font-bold text-slate-300">
+        シールドトンネル技術標準体系・現場OJT教育マニュアル【日中対訳・Web版】
+      </div>
+      <div>
+        Civil Shield Tunneling Standard Master Manual (Japanese - Traditional Chinese Bilingual Edition)
+      </div>
+      <div class="text-[11px] text-slate-500">
+        規格準拠：日本土木学会 (JSCE) シールド工法技術基準 ＆ 國家地下工程施工標準規範
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Component & Phase JavaScript Logic -->
+  <script>
+    // -------------------------------------------------------------
+    // 1. Component Data (9 Core Systems)
+    // -------------------------------------------------------------
+    const componentData = {
+      cutterhead: {
+        icon: "①",
+        titleJp: "カッターヘッド切削機構 (Cutterhead)",
+        titleZh: "刀盤切削系統",
+        category: "掘削・切削コア",
+        tag: "FRONT-01",
+        structure: "高剛性溶接鋼構造。面板式（クローズド）またはスポーク式（オープン）。外周部にコピーカッター（超掘りバイト/Overcutter）を装備。開口率は地質に応じて 28%~42% に設定。ディスクカッター（円盤削孔具）、超硬スクレッパー（掻き取りビット）、センターコーンを最適配置。",
+        function: "メインドライブの巨大トルクにより 1.0~3.5 rpm で低速回転し、切削面（切羽）の岩盤・砂礫・粘性土を破砕。掻き取った土砂をスリットからチャンバー内へ取り込む。同時にカッター面板から起泡剤やベントナイト泥水を高圧注入し、切削土の流動性を高める。",
+        qa: [
+          "・カッタービットの摩耗限界計測（電気的断線センサーまたは超音波厚み計による日常点検）",
+          "・面板開口部の泥土固着・閉塞を防止する高圧水フラッシングノズルの機能点検",
+          "・面板表面の耐摩耗肉盛溶接（Hardfacing）の剥離・クラック点検"
+        ],
+        terms: [
+          { jp: "ディスクカッター", zh: "滾刀 (Disc Cutter)" },
+          { jp: "コピーカッター", zh: "超挖刀 (Overcutter)" },
+          { jp: "スリット開口率", zh: "開口率 (Opening Ratio)" }
+        ]
+      },
+      chamber: {
+        icon: "②",
+        titleJp: "圧力隔壁・チャンバー (Pressure Chamber & Bulkhead)",
+        titleZh: "土壓/泥水壓力艙與隔壓壁",
+        category: "切羽安定・土圧保持",
+        tag: "FRONT-02",
+        structure: "カッターヘッド背面から高張力厚鋼板の圧力隔壁（Pressure Bulkhead）に至る密閉高圧空間。隔壁には高精度土圧・水圧センサー、土質改良剤注入口、及び作業員が高圧下で切羽へ入るマンロック（エアロック人閘）を装備。",
+        function: "切羽土圧・水圧に見合ったチャンバー内圧（P_chamber = P_earth + P_water）を常時維持し、切羽の崩落や過剰取り込みを防止。土圧式ではスクリューコンベアの回転数で排土量を制御し、泥水式では空気圧クッション（Air Bubble）で泥水圧を微細制御。",
+        qa: [
+          "・隔壁土圧計（上・中・下計4~8箇所）のゼロ点校正（毎週標定、精度 ±1 kPa）",
+          "・高圧進入（Hyperbaric Intervention）用マンロックの気密保圧試験（0.5MPa・30分間）",
+          "・隔壁配線ペネトレーション部の漏水・絶縁抵抗点検"
+        ],
+        terms: [
+          { jp: "圧力隔壁（かくへき）", zh: "隔壓壁 (Bulkhead)" },
+          { jp: "チャンバー土圧", zh: "艙內土壓 (Chamber Pressure)" },
+          { jp: "マンロック（人閘）", zh: "人員進艙閘門 (Man Lock)" }
+        ]
+      },
+      maindrive: {
+        icon: "③",
+        titleJp: "メインドライブ＆主軸受 (Main Drive & Bearing)",
+        titleZh: "主驅動系統與大型主軸承",
+        category: "回転動力心臓部",
+        tag: "CORE-03",
+        structure: "数メートルの大径3列円筒ころ主軸受（Main Bearing）、インバータ制御式可変速電動モーター群または斜板式油圧モーター、遊星歯車減速機、強制循環潤滑装置、及び4重リップシール（Lip Seals）で構成。",
+        function: "カッターヘッドに作用する巨大な軸方向推進反力、ラジアル荷重、及び転倒モーメントを一手に受け止め、数千 kNm に及ぶ回転トルクを滑らかに伝達。リップシール間に高圧シーリンググリースを自動圧入し、外部土砂・地下水の侵入を完全遮断。",
+        qa: [
+          "・主軸受ギヤ潤滑油の毎週サンプリング（SOAP分析：Fe, Cu, Cr 摩耗金属粉測定）",
+          "・4重リップシールへの高圧シールグリース自動圧注圧力監視（チャンバー圧 + 1~2 bar 保圧）",
+          "・モーター固定子巻線温度（< 105℃）及び減速機ベアリング振動加速度スペクトル監視"
+        ],
+        terms: [
+          { jp: "主軸受（しゅじくうけ）", zh: "主軸承 (Main Bearing)" },
+          { jp: "減速機（げんそくき）", zh: "行星齒輪減速機 (Planetary Gearbox)" },
+          { jp: "リップシール", zh: "唇形密封圈 (Lip Seal)" }
+        ]
+      },
+      screw: {
+        icon: "④",
+        titleJp: "スクリューコンベア (Screw Conveyor)",
+        titleZh: "螺旋輸送排土機",
+        category: "排土・土圧減圧弁",
+        tag: "DISCHARGE-04",
+        structure: "厚肉耐摩耗合金鋼ケーシングと可変ピッチスクリューリボン羽根。後端部に油圧式排土調整ゲート（Discharge Gate）を配置。設置傾斜角は通常 18°~26°。前後にスライド退避可能な機構を持つ。",
+        function: "チャンバー底部に堆積した切削土砂を等速回転で後方へ連続搬出。スクリュー胴内で土砂を適度に締め固めることで「プラグ効果（Soil Plug Effect）」を発揮させ、チャンバー内の高圧（数気圧）を大気圧まで無段階に減圧・遮断する。",
+        qa: [
+          "・スクリュー羽根エッジ部の耐摩耗肉盛摩耗限界管理（摩耗 10mm 以内で肉盛補修）",
+          "・排土ゲートの緊急油圧遮断テスト（噴発/Blow-out 発生時の 3秒以内完全遮断試験）",
+          "・スクリュー回転数と排土体積・重量の同期相関モニタリング"
+        ],
+        terms: [
+          { jp: "プラグ効果", zh: "土塞效應 (Soil Plug Effect)" },
+          { jp: "排土ゲート", zh: "出土保壓閘門 (Discharge Gate)" },
+          { jp: "噴発（ふんぱつ）", zh: "噴湧浩劫 (Blow-out)" }
+        ]
+      },
+      jacks: {
+        icon: "⑤",
+        titleJp: "シールドジャッキ群 (Thrust Jack System)",
+        titleZh: "推進千斤頂群系統",
+        category: "推進推進動力",
+        tag: "THRUST-05",
+        structure: "シールド円周方向に均等配置された高圧両ロッド型油圧シリンダー（通常 20~40本）。A（上）、B（右）、C（下）、D（左）の4象限グループに油圧回路が独立分割。ロッド先端に大面積スプレッダーシュー（靴板）を装着。",
+        function: "既設セグメントの端面に反力を取り、数千~数万トンの巨大推力（Thrust Force）を発生させて機体を前進させる。象限ごとのジャッキ油圧・ストロークを比例制御弁で制御し、カーブ施工時の偏角付与および蛇行姿勢をミリ単位でリアルタイム修正。",
+        qa: [
+          "・各シリンダー内蔵磁歪式ストロークセンサーの同期精度較正（誤差 ≤ 1.0mm）",
+          "・スプレッダーシューゴムクッションの摩耗・脱落点検（偏荷重によるセグメント割れ防止）",
+          "・油圧配管の高圧耐圧試験（定格使用圧 35MPa・漏れ皆無確認）"
+        ],
+        terms: [
+          { jp: "シールドジャッキ", zh: "推進千斤頂 (Thrust Jack)" },
+          { jp: "スプレッダーシュー", zh: "頂靴 / 承壓墊板 (Spreader Shoe)" },
+          { jp: "偏角（へんかく）制御", zh: "行程差糾偏控制 (Differential Stroke)" }
+        ]
+      },
+      erector: {
+        icon: "⑥",
+        titleJp: "セグメントエレクター (Segment Erector)",
+        titleZh: "管片拼裝機（真圓組裝機器人）",
+        category: "覆工真円組立",
+        tag: "ERECTOR-06",
+        structure: "シールドテール内壁の大型旋回ベアリングに支持された回転フレーム。旋回（360°連続）、前後スライド、昇降、ローリング、ピッチング、及びメカニカルボルトクランプ/真空バキュームヘッドを備える6自由度マニピュレーター。",
+        function: "後続台車から供給されたセグメントピースを受け取り、テールシェル内の保護空間で、標準ピース（A）、隣接ピース（B）、及び最後の楔形キーピース（K）を正確な位置へ把持・旋回・挿入。真円の永久覆工リングを構築する。",
+        qa: [
+          "・把持ピン・バキューム吸引圧の脱落防止インターロック安全試験（安全率 ≥ 3.0）",
+          "・セグメント位置合わせ微調整精度（隣接目違い ≤ 3.0mm、リング間隙間 ≤ 2.0mm）",
+          "・連結ボルトの規定トルク締付け管理（キャリブレーション済みトルクレンチ使用）"
+        ],
+        terms: [
+          { jp: "セグメントエレクター", zh: "管片拼裝機 (Segment Erector)" },
+          { jp: "キーピース（Kセグメント）", zh: "封頂楔形塊 (Key Segment)" },
+          { jp: "目違い（めちがい）", zh: "管片錯台 (Misalignment/Step)" }
+        ]
+      },
+      tailseal: {
+        icon: "⑦",
+        titleJp: "3重テールシールブラシ (Tail Brush Seal)",
+        titleZh: "三重鋼絲盾尾密封刷",
+        category: "止水・湧水防止障壁",
+        tag: "SEAL-07",
+        structure: "後胴内周面に全周連続で配置された 3~4列の特殊ピアノ線/高弾性ワイヤーブラシ。各列ブラシ間の空隙チャンバーに高粘度テールシールグリース（防水・充填油脂）を連続充填。保護用ワイヤーメッシュ及び押え板を併設。",
+        function: "シールド外殻とセグメント外周面とのクリアランス（テール隙間）を完全に封止。外部の高圧地下水、流砂、及び後方から高圧注入される裏込グラウト注入材がシールド内部へ逆流侵入するのを強固に遮断する。",
+        qa: [
+          "・発進前水密・気密耐圧試験（立坑内で 0.8MPa・30分間保圧・漏水ゼロ確認）",
+          "・テールグリース自動注入ポンプの圧送圧（切羽水圧 + 0.2MPa 以上保持）及び環当たり消費量管理",
+          "・ワイヤーブラシの弾性へたり・塑性変形点検（過大ジャッキ偏角時のブラシ圧壊防止）"
+        ],
+        terms: [
+          { jp: "テールシールブラシ", zh: "盾尾鋼絲刷 (Tail Brush)" },
+          { jp: "テールグリース", zh: "盾尾密封油脂 (Tail Grease)" },
+          { jp: "裏込逆流防止", zh: "防止背填漿液倒灌 (Backflow Prevention)" }
+        ]
+      },
+      grouting: {
+        icon: "⑧",
+        titleJp: "同時裏込注入管路 (Simultaneous Grout System)",
+        titleZh: "同步背填灌漿管路",
+        category: "地盤沈下防止コア",
+        tag: "GROUT-08",
+        structure: "後胴スキンプレート内に埋設された 4~6系統の独立耐圧グラウト注入管路。先端ノズルはテールブラシ直後の外周部に開口。A液（主材：水ガラス系等）とB液（硬化剤：セメント懸濁液）の混合器（スタティックミキサー）を直前に配置。",
+        function: "シールド機が前進し、テールプレートからセグメントが離脱した瞬間に生じる環状の「テールボイド（建築限界空隙）」へ、即座に2液硬化型裏込材を高圧充填。数十秒でゲル化固結させ、周辺地盤の弛み・地表面沈下を未然に防ぐ。",
+        qa: [
+          "・注入圧力の厳格管理（切羽水土圧 + 0.1~0.2MPa、地表面浮動防止）",
+          "・注入率（α = 130%~180%）による理論ボイド体積に対する実注入量照合",
+          "・推進停止時の即時高圧水自動逆洗（配管内モルタル早期ゲル化閉塞の完全防止）"
+        ],
+        terms: [
+          { jp: "テールボイド", zh: "建築空隙 / 盾尾間隙 (Tail Void)" },
+          { jp: "同時裏込注入", zh: "同步背填灌漿 (Simultaneous Grouting)" },
+          { jp: "ゲルタイム（凝結時間）", zh: "膠羽凝結時間 (Gel Time)" }
+        ]
+      },
+      gantry: {
+        icon: "⑨",
+        titleJp: "後続台車バックアップシステム (Backup Gantry)",
+        titleZh: "後續台車支援系統",
+        category: "動力・物流・制御中枢",
+        tag: "SUPPORT-09",
+        structure: "シールド機後方に連結ピン牽引される 1~5号の複数階層鋼構造台車群。セグメント上面に敷設された重軌条レール上を台車ホイールで走行。各号車間に歩行用キャットウォーク・非常脱出通路を確保。",
+        function: "高圧受変電キュービクル、主油圧ポンプユニット、オペレーター集中制御キャビン（PLC / SCADA）、裏込モルタル混練貯蔵タンク、換気ファン・ダクト延伸装置、ズリ搬出ベルトコンベア、及びセグメント供給ホイスト等の全後方ライフラインを搭載。",
+        qa: [
+          "・高圧ケーブルリール（Cable Reel）の巻取り張力リミットスイッチ動作点検",
+          "・坑内自動ガス検知器（可燃性メタン CH4、一酸化炭素 CO、酸素 O2 濃度）の校正",
+          "・台車脱線防止ストッパー及び非常油圧ブレーキ機能点検"
+        ],
+        terms: [
+          { jp: "後続台車（こうぞくだいしゃ）", zh: "後續台車 (Backup Gantry)" },
+          { jp: "集中制御キャビン", zh: "主控操作室 (Control Cabin)" },
+          { jp: "ケーブルリール", zh: "高壓電纜捲盤 (Cable Reel)" }
+        ]
+      }
+    };
+
+    // -------------------------------------------------------------
+    // 2. Phase Sequential Data (20 Steps across 4 Phases)
+    // -------------------------------------------------------------
+    const phaseData = {
+      1: {
+        phaseNum: 1,
+        titleJp: "フェーズ 1：発進前準備・地盤改良工 (Pre-Tunneling Works)",
+        titleZh: "階段一：發進前置土建與地盤改良工種",
+        badge: "工程 01 ~ 06",
+        descJp: "シールド機立坑建込み前に、堅牢な立坑土留め壁を構築し、坑口地盤を事前固化改良して、発進鏡切り時の土砂崩落・突発湧水を完全に遮断します。",
+        descZh: "在潛盾機下坑前，必須構築穩固之立坑圍護結構，並對洞口地盤實施超前固化改良，杜絕破鏡出發時發生坍塌與突泥湧水浩劫。",
+        steps: [
+          {
+            num: "01",
+            nameJp: "地質補足ボーリング＆地下埋設物防護",
+            nameZh: "地質補充鑽探與地下管線障礙物清除",
+            detailJp: "トンネル線形及び発進立坑周囲で 20~30m 間隔の追加ボーリングを実施。地下水位、透水係数、支持層深さを確認。支障となる上水道、高圧電力、都市ガス管及び既設基礎杭を試掘移設・防護。",
+            detailZh: "針對隧道軸線及發進立坑四周進行加密地質鑽探（間距 20~30m），查明地下水位、透水係數、基岩深度；探查並遷移影響施工之地下自來水、高壓電力、瓦斯管線及既有基樁。",
+            keyPoint: "透水係数確認 / 埋設物事故ゼロ"
+          },
+          {
+            num: "02",
+            nameJp: "発進立坑・土留め地下連続壁構築",
+            nameZh: "發進立坑土建與連續壁圍護施工",
+            detailJp: "泥水削孔機による地下連続壁（Diaphragm Wall）または鋼管ソイルセメント連壁（SMW）を打設。多段鋼製切梁支保工を架設し土方掘削。高耐力鉄筋コンクリート底版を打設し発進推力受けを確保。",
+            detailZh: "構築地下連續壁（Diaphragm Wall）或型鋼排樁擋土牆；架設多道高強鋼管/型鋼支撐並開挖土方；澆置厚實之鋼筋混凝土底版，預留足夠抗浮與承受數千噸推進反力之結構承載力。",
+            keyPoint: "底版耐力 / 揚圧力対策"
+          },
+          {
+            num: "03",
+            nameJp: "発進坑口地盤改良（鏡面包絡固化工）",
+            nameZh: "發進端洞口鏡面包絡地盤改良",
+            detailJp: "坑口外側地盤に高圧噴射撹拌工法（JSG/RJP）や薬液注入工、または凍結工法を施工。延長 6~10m の不透水固化改良体を形成（透水係数 k < 1.0×10⁻⁷ cm/s、一軸圧縮強度 qu ≥ 1.0~2.0 MPa）。",
+            detailZh: "於洞口連續壁外側地層施作高壓噴射灌漿（JSG/JJM）、三軸深層攪拌樁（SMM）或凍結工法（Freezing），形成長度 6~10m 之防滲止水改良體，要求透水係數 k < 1.0×10⁻⁷ cm/s 且強度 qu > 1.0~2.0 MPa。",
+            keyPoint: "透水係数 k < 10⁻⁷ cm/s"
+          },
+          {
+            num: "04",
+            nameJp: "発進架台（受台）＆反力受け架設",
+            nameZh: "發進基座與發進反力架安裝",
+            detailJp: "立坑底版上にミリ精度で発進ガイド鋼製架台を測量据付け。立坑後方壁に大型H形鋼・箱形鋼梁による発進反力受け（Reaction Frame）を組み立て、初期掘進時のジャッキ推力を受ける。",
+            detailZh: "在立坑底版上精準測量放樣發進鋼導軌台架（水平與垂直偏差 ≤ 1mm）；於立坑後壁組裝由大型型鋼與鋼箱樑構成之發進反力架，承受潛盾機初期掘進推力。",
+            keyPoint: "架台据付け誤差 ≤ 1.0mm"
+          },
+          {
+            num: "05",
+            nameJp: "坑口エントランスシール装置設置",
+            nameZh: "發進洞口止水裝置（密封圈）安裝",
+            detailJp: "連壁開口部に鋼製埋込リングを固定。2条以上のリップ形特殊ゴムパッキン、エア膨張チューブ、及び押えプレートを装着し、シールド外殻が貫入する際の泥水坑内噴出を防止。",
+            detailZh: "在連續壁開口處預埋鋼環圈，安裝簾布式橡膠板、充氣氣囊密封圈及壓板，形成緊密包覆盾構機外殼之止水氣密圈，防止始發時泥水湧入坑內。",
+            keyPoint: "エアバッグ空気圧 0.4MPa"
+          },
+          {
+            num: "06",
+            nameJp: "地上プラント設備構築（受変電・ずり土・裏込）",
+            nameZh: "地面配套設施建置（受變電/集土/泥水/注漿廠）",
+            detailJp: "特別高圧受変電設備、門形クレーン（Gantry Crane）、坑内送排気ファン、掘削ずり土ピット、泥水処理分離プラント、及び同時裏込モルタル自動混練プラントを完成させ試運転。",
+            detailZh: "建置雙迴路高壓變電所、大噸位門式起重機（Gantry Crane）、洞內通風管道機房、出碴集土坑、泥水分離淨化廠（泥水盾構專用）及背填砂漿拌合站。",
+            keyPoint: "2系統給電 / 非常発電機"
+          }
+        ]
+      },
+      2: {
+        phaseNum: 2,
+        titleJp: "フェーズ 2：発進鏡切り・初期掘進工 (Launch & Initial Drive)",
+        titleZh: "階段二：發進破鏡與初期掘進工種",
+        badge: "工程 07 ~ 11",
+        descJp: "坑口コンクリート壁を取り壊してシールド機を切羽へ前進させ、仮セグメントを順次組み立てて反力を確保しながら、初期掘進を完遂します。",
+        descZh: "破除洞門鋼筋混凝土鏡面壁，潛盾機切入地層，逐步安裝暫設負環管片建立推進反力，直至全機進入地層並接上後續台車。",
+        steps: [
+          {
+            num: "07",
+            nameJp: "坑口鏡面コンクリート取壊し（鏡切り）",
+            nameZh: "鏡面連續壁破除（洞門破鏡作業）",
+            detailJp: "事前削孔水圧テストで地盤改良層の無湧水を確認後、油圧ブレーカーまたはワイヤーソーで連壁コンクリートを小割破砕。鉄筋を切断し、固化改良地山を切羽全面に露出。",
+            detailZh: "於洞外改良體探水確認無滲漏後，使用液壓鑽破碎機分塊拆除洞門範圍內之連續壁混凝土與割斷鋼筋，暴露出改良加固之土體開挖面。",
+            keyPoint: "削孔出水確認 / 迅速撤去"
+          },
+          {
+            num: "08",
+            nameJp: "シールド機前進突入＆坑口密着シール",
+            nameZh: "潛盾機前移進洞與止水圈閉合",
+            detailJp: "発進架台からシールドジャッキを微速前進させ、カッターヘッドを切羽地山に密着。坑口エントランスシールのゴムパッキンがシールド外周を包み込み、坑口止水ラインを確立。",
+            detailZh: "啟動千斤頂將潛盾機自發進基座緩慢向前推入改良土層，刀盤貼緊開挖面；洞口簾布橡膠止水環緊貼外殼，建立第一道防水屏障。",
+            keyPoint: "密着前進 / パッキン巻き込み防止"
+          },
+          {
+            num: "09",
+            nameJp: "仮セグメント（反力リング）順次組立",
+            nameZh: "臨時負環管片組裝與推力傳遞",
+            detailJp: "テール内で鋼製または仮コンクリートセグメントをエレクターで組立（通常 5~10リング）。発進反力架台へジャッキ推力を確実に伝達し、機体を地中深く推進させる。",
+            detailZh: "在盾尾內依序拼裝數環臨時鋼製或混凝土負環管片（通常 5~10 環），向前傳遞推力於反力架上，逐步推進潛盾機機身。",
+            keyPoint: "反力受け直角度確認"
+          },
+          {
+            num: "10",
+            nameJp: "テール抜け＆坑口充填裏込注入",
+            nameZh: "盾尾脫離鏡面與洞口密封注漿",
+            detailJp: "シールドテール端が坑口エントランスシールを完全に通過した直後、坑口リング隙間に高粘度ウレタン樹脂または特殊グラウトを急結注入し、立坑坑口を完全水密閉塞。",
+            detailZh: "當盾尾完全穿過洞門密封環後，立即對洞口環形間隙進行壓注聚氨酯或雙液漿液封堵，完全隔絕外界水土。",
+            keyPoint: "坑口急結ウレタン注入"
+          },
+          {
+            num: "11",
+            nameJp: "初期掘進パラメーター検証・後続台車連結",
+            nameZh: "初期掘進參數試驗、負環拆除與後續台車下坑",
+            detailJp: "初期 50~100m の推進データ（チャンバー圧・トルク・ずり土量・地表面沈下）を解析し本掘進仕様を決定。仮リングを撤去し、立坑上から後続台車を吊り降ろして本機と連結。",
+            detailZh: "於前 50~100 米初期掘進中，比對土壓、推力、出土量與地表沉陷觀測值；全機身入洞後拆除臨時負環管片，將後續台車吊入立坑與主機接軌。",
+            keyPoint: "パラメーター最適化 / 本線連結"
+          }
+        ]
+      },
+      3: {
+        phaseNum: 3,
+        titleJp: "フェーズ 3：本掘進・サイクル施工工 (Main Drive Cycle)",
+        titleZh: "階段三：常態掘進標準施工作業循環",
+        badge: "工程 12 ~ 16（毎リング 1.2m~1.5m 反復循環）",
+        descJp: "24時間連続稼働体制に入り、1リング掘進（通常 1.2m または 1.5m）ごとに、掘削・排土・推進・セグメント組立・同時裏込注入の極めて緻密なサイクルを反復完遂します。",
+        descZh: "進入全天候 24 小時連續作業模式，每掘進一環（通常 1.2m 或 1.5m）即完成一個極度精密的流水線工藝循環。",
+        steps: [
+          {
+            num: "12",
+            nameJp: "掘削推進＆水土圧バランス制御",
+            nameZh: "開挖掘削與水土平衡保壓控制",
+            detailJp: "カッターヘッドを回転させながら、土質改良材（フォーム/ポリマー）を注入。チャンバー内圧を設定土圧（理論値 ±10kPa 以内）に精密保持し、地表面変位（< 10mm）を徹底管理。",
+            detailZh: "刀盤迴轉切削地層，開挖艙注入發泡劑或泥漿維持預設土壓（誤差控制在 ±10 kPa 內），防止地表沉陷（< 10mm）或隆起。",
+            keyPoint: "チャンバー内圧管理 ±10 kPa"
+          },
+          {
+            num: "13",
+            nameJp: "ずり土排出・排土量計量＆坑外搬出",
+            nameZh: "碴土排出、計量比對與洞內物流外運",
+            detailJp: "スクリューコンベアでずり土を等速搬出。ベルトスケールでリング毎の実掘削重量・体積を連続計測（理論掘削体積の 98%~102%）。坑内軌道バッテリー機関車で立坑へピストン輸送。",
+            detailZh: "螺旋輸送機排土（或排泥管抽送），每環嚴格秤重或體積量測（理論開挖體積的 98%~102%）；土碴裝入土斗車，由軌道電瓶車牽引至立坑由門吊吊至地面。",
+            keyPoint: "排土比率 98% ~ 102%"
+          },
+          {
+            num: "14",
+            nameJp: "推進ジャッキストローク制御＆レーザー自動姿勢修正",
+            nameZh: "千斤頂推進與雷射自動導向糾偏",
+            detailJp: "推進ジャッキ群が 1リングストローク伸長。自動追尾トータルステーションとアクティブターゲットがピッチング・ローリング・偏位を毎秒演算し、ジャッキ各象限油圧を自動微調整。",
+            detailZh: "千斤頂推動機身向前推進一環行程（約 1.2m~1.5m）；操作室依據 VMT/ZED 雷射靶即時回傳之姿態數據，微調各象限油壓，糾正俯仰與偏航。",
+            keyPoint: "中心線偏差 ±50mm 以内"
+          },
+          {
+            num: "15",
+            nameJp: "推進停止・ジャッキ引込み＆セグメント真円組立",
+            nameZh: "推進停止、分區收縮千斤頂與管片真圓拼裝",
+            detailJp: "1リング推進完了後、ジャッキを象限ごとに後退。エレクターで Aピース、Bピース、Kピースの順にセグメントを組み立て、斜め継手ボルトを規定トルク値で均等緊結成環。",
+            detailZh: "推進達標後停止掘進，分區縮回對應千斤頂；管片拼裝機依次安裝 Standard、Neighbor 與 Key 塊，穿入高強螺栓並以定扭力扳手緊固成環。",
+            keyPoint: "ボルト規定トルク / 目違い ≤ 5mm"
+          },
+          {
+            num: "16",
+            nameJp: "同時裏込注入＆坑内レール・インフラ延伸",
+            nameZh: "同步背填灌漿與軌道電纜通風管延伸",
+            detailJp: "テール離脱と同時にテール注入管から2液硬化型裏込材をボイドへ同時注入。推進台車の前進に伴い、軌条レール、高圧給電ケーブル、換気ダクト、泥水配管を次々と延伸敷設。",
+            detailZh: "隨盾尾脫離新拼管片，立刻自盾尾管同步注入雙液漿填充建築空隙；隨車鋪設施工輕軌軌道，延伸通風管、電纜、高壓水管與排水管路。",
+            keyPoint: "注入率 α 1.3~1.8 / 即時逆洗"
+          }
+        ]
+      },
+      4: {
+        phaseNum: 4,
+        titleJp: "フェーズ 4：到達貫通・解体撤去・後続工 (Breakthrough & Post-Works)",
+        titleZh: "階段四：到達貫通、拆解與後續內部結構",
+        badge: "工程 17 ~ 20",
+        descJp: "終点の到達立坑へ正確に貫通させ、シールド機を安全に解体搬出した後、インバートコンクリート打設、連絡横坑、及び軌道・設備工事へと円滑に引き渡します。",
+        descZh: "在到達端立坑安全破鏡接收潛盾機，拆解吊出，隨後展開隧道內部二次襯砌、仰拱澆置、聯絡橫坑與機電鋪設。",
+        steps: [
+          {
+            num: "17",
+            nameJp: "到達立坑地盤改良＆受入れシール設置",
+            nameZh: "到達端立坑地盤改良與到達止水圈安裝",
+            detailJp: "到達立坑坑口外側に高圧噴射撹拌で 5~8m の防護固化体を築造。立坑壁に受入れエントランスシール及びシールド受台（Reception Cradle）をミリ単位で測量アンカー固定。",
+            detailZh: "於到達立坑洞門外施作 5~8m 固化地盤改良，立坑洞門預埋接收止水密封圈與接收托架（Reception Cradle），校驗終點軸線座標。",
+            keyPoint: "受台座標検証 / 止水パッキン"
+          },
+          {
+            num: "18",
+            nameJp: "到達鏡切り・シールド貫通＆受台着座",
+            nameZh: "貫通破鏡與潛盾機滑上接收基座",
+            detailJp: "到達坑口連壁コンクリートを削孔解体。シールドカッターヘッドが坑口から姿を現し、受入れ架台上へ滑らかに着座。最終正規セグメントを組立完了しテール後方を完全注入閉塞。",
+            detailZh: "鑿除到達洞門連續壁；潛盾機刀盤切入洞口，平穩滑行至接收鋼托架上；拼裝最後一環正式管片，盾尾同步嚴密注漿封堵。",
+            keyPoint: "着座ミリ単位確認 / 坑口止水"
+          },
+          {
+            num: "19",
+            nameJp: "シールド機坑内解体＆大型クレーン吊上げ搬出",
+            nameZh: "潛盾機坑內解體與大型吊車吊離出坑",
+            detailJp: "カッターヘッド、前中後胴体、主軸受、スクリュー、推進ジャッキ群をモジュールごとにガス切断・ボルト解体。大型クレーンで立坑上へ吊り上げ、工場再生または次回現場へ搬送。",
+            detailZh: "將刀盤、盾體、推進千斤頂與後續台車分段解體，使用大噸位吊車吊出到達立坑，清點檢修運回工廠或準備調頭二次發進。",
+            keyPoint: "玉掛け安全 / 重機転倒防止"
+          },
+          {
+            num: "20",
+            nameJp: "インバート打設・連絡横坑＆本設軌道設備施工",
+            nameZh: "隧道底部仰拱澆置、聯絡橫坑施作與機電軌道鋪設",
+            detailJp: "トンネル底部にインバートコンクリートを打設し、排水溝・側歩道を構築。双設トンネル間の連絡横坑（避難通路）を施工。軌道スラブ、架線、信号、防災設備等の後続設備工事へ全面移管。",
+            detailZh: "澆置隧道底部仰拱混凝土（Invert Concrete）及兩側逃生步道、排水溝；施作雙線間聯絡橫坑（Cross Passage）；移交進行機電、通風、信號及無道碴軌道鋪設。",
+            keyPoint: "インバート平坦性 / 漏水点検"
+          }
+        ]
+      }
+    };
+
+    // -------------------------------------------------------------
+    // 3. Multi-Trade Matrix Data (6 Key Departments)
+    // -------------------------------------------------------------
+    const matrixData = [
+      {
+        tradeJp: "1. 機長オペレーター",
+        tradeZh: "機長操控組 (Driver / Operator)",
+        dutyJp: "チャンバー内水土圧バランス維持、総推力・象限別ジャッキ油圧比例調整、カッタートルク監視、及び線形姿勢糾偏指示。",
+        dutyZh: "掌控千斤頂推力、分區油壓、刀盤扭矩與土壓/泥水平衡值，下達推進停止及千斤頂分區退縮指令。",
+        upstreamJp: "測量チームからのDTA偏差角指示＆地質調査報告書",
+        upstreamZh: "測量導向資料與地質鑽探報告",
+        downstreamJp: "推進ストローク完了通告＆ジャッキ引込み指令（エレクター班へ）",
+        downstreamZh: "下達推進停止及千斤頂分區退縮指令給拼裝組",
+        riskJp: "切羽崩壊による地表面陥没、または過剰加圧による地盤隆起・泥水噴発。即時スクリュー停止と加圧剤補給で対処。",
+        riskZh: "開挖面失穩導致地表沉陷或隆起冒漿；需即刻關閉出土閘門並保壓。"
+      },
+      {
+        tradeJp: "2. セグメント組立工",
+        tradeZh: "管片拼裝組 (Erection Crew)",
+        dutyJp: "エレクター6自由度マニピュレーター操作、A/B/Kピース真円組立、目違い防止、及び斜めボルト規定トルク締結。",
+        dutyZh: "操作 6 自由度拼裝手，定位 Standard/Neighbor/Key 塊並打入螺栓，確保真圓度與防水止水條平整。",
+        upstreamJp: "推進完了合図＆ジャッキシリンダー安全後退",
+        upstreamZh: "機長推進行程到達（通常 1.2m~1.5m）並收回千斤頂",
+        downstreamJp: "真円リング完成通告＆次リング推進ジャッキ受圧反力提供",
+        downstreamZh: "完成真圓成環襯砌，提供下一循環千斤頂頂推反力",
+        riskJp: "セグメント目違い（> 5mm）による止水ゴム脱落漏水、キーピース挿入時の角欠けクラック。ガイドピン使用と均等トルク必須。",
+        riskZh: "管片錯台（>5mm）、碎角裂縫或止水橡膠條脫落造成隧道滲漏水。"
+      },
+      {
+        tradeJp: "3. 裏込注入工",
+        tradeZh: "背填灌漿組 (Grouting Crew)",
+        dutyJp: "テールボイドへの2液硬化型裏込モルタル同時注入、注入圧力（0.2~0.4MPa）監視、注入率管理、及び配管自動水洗浄。",
+        dutyZh: "同步注入雙液型（A液膠體+B液水硬水泥）填充盾尾建築空隙，固化周圍地層並及早提供管片抗浮力。",
+        upstreamJp: "シールドジャッキ推進開始シグナル連動",
+        upstreamZh: "推進千斤頂開始啟動推進信號",
+        downstreamJp: "テールボイド完全充填・地山初期支持力確立＆セグメント浮遊防止",
+        downstreamZh: "固化地層、早期提供管片自立抗浮力及防水密封",
+        riskJp: "注入量不足による地盤遅れ沈下、または過大圧によるセグメント変形・地表噴発。注入率 130~180% 厳守。",
+        riskZh: "注漿不足致地面下陷；注漿過大或串漿致管片上浮變形或冒漿。"
+      },
+      {
+        tradeJp: "4. 測量・線形誘導工",
+        tradeZh: "測量導向組 (Survey & Guidance)",
+        dutyJp: "地上基準点踏査、立坑内鉛直測設（投点）、ジャイロコンパス方位角較正、及びトータルステーションレーザー誘導保守。",
+        dutyZh: "人工複核地面控制點、立坑投點、陀螺儀定向與雷射導向系統（VMT/ZED），提供姿態糾偏數據。",
+        upstreamJp: "直前リングの組立後真円度・幾何中心実測データ",
+        upstreamZh: "前一環拼裝完成姿態（真圓度與中線座標）",
+        downstreamJp: "次リング推進時の目標ストローク差（DTA曲線補正指令）通報",
+        downstreamZh: "給予機長下一環千斤頂分區行程差修正曲線（DTA 指令）",
+        riskJp: "レーザー光屈折や投点誤差によるトンネル軸線逸脱（> ±50mm）および建築限界侵入事故。定期手動検証が必須。",
+        riskZh: "隧道軸線跑偏超出公差（>±50mm）造成管片侵界侵犯建築極限。"
+      },
+      {
+        tradeJp: "5. 坑内運搬・土砂搬出工",
+        tradeZh: "洞內運輸物流組 (Logistics & Haulage)",
+        dutyJp: "坑内レール軌道敷設・維持、バッテリー機関車編成運行、セグメント搬入、モルタル搬送、及びずり土ホッパー立坑搬出。",
+        dutyZh: "電瓶機車編組運輸管片、砂漿罐、軌道枕木、油脂與出碴土車；負責洞內輕軌線路延伸鋪設。",
+        upstreamJp: "地上ヤード門形クレーンからの荷受け資材＆後方指令",
+        upstreamZh: "地面門吊垂直裝載與後台指令",
+        downstreamJp: "切羽作業ブロックへのセグメント・資材定時補給＆掘削ずり土即時排出",
+        downstreamZh: "將開挖廢土送至立坑吊出，並即時補給拼裝管片及砂漿",
+        riskJp: "坑内単線区間での列車正面衝突、脱線転覆事故、または土砂ホッパー脱落。信号保安システムと逸走防止器徹底。",
+        riskZh: "洞內軌道脫軌相撞、行車信號失效或排土溜槽卡死造成工期延誤。"
+      },
+      {
+        tradeJp: "6. 機電保全工",
+        tradeZh: "機電保全組 (E&M Utility Crew)",
+        dutyJp: "高圧受変電ケーブル巻取り点検、油圧配管圧力テスト、テールグリース圧送ポンプ保守、及び換気・排水ポンプ連続監視。",
+        dutyZh: "維護高壓電纜、變壓器、液壓閥塊、盾尾刷注脂泵、通風泵浦及泥水泵浦，確保 24 小時連續運作。",
+        upstreamJp: "各計器センサーの稼働アラート・温度振動データ",
+        upstreamZh: "各系統運轉即時監控數據回報",
+        downstreamJp: "全線24時間無停止動力・換気・高圧給水・排水インフラの保証",
+        downstreamZh: "維持全線 24 小時不間斷高壓動力與泥水、排水、通風循環",
+        riskJp: "突然の全停電による切羽崩壊、テールグリース切れによる出水水没事故。常用/予備発電機の自動切替テスト実施。",
+        riskZh: "停電停水造成艙壓驟降崩塌、或尾刷漏脂進水淹沒隧道。"
+      }
+    ];
+
+    // -------------------------------------------------------------
+    // 4. Glossary 80+ Terms (Japanese with kana, Chinese, English, Notes)
+    // -------------------------------------------------------------
+    const glossaryData = [
+      // Category: machine
+      { cat: "machine", no: "01", jp: "シールド掘進機 (シールドくっしんき)", zh: "潛盾機 / 盾構機", en: "Shield Machine / TBM", note: "地下開挖軟弱地盤並由鋼製外殼保護下構築隧道之複合重裝備。" },
+      { cat: "machine", no: "02", jp: "カッターヘッド", zh: "刀盤切削機構", en: "Cutterhead", note: "前端裝載滾刀齒刀之旋轉切削面盤。" },
+      { cat: "machine", no: "03", jp: "ディスクカッター", zh: "滾刀 / 圓盤滾刀", en: "Disc Cutter", note: "切削岩石與礫石層之滾動高強度合金鋼盤。" },
+      { cat: "machine", no: "04", jp: "カッタービット", zh: "齒刀 / 刀齒", en: "Cutter Bit / Scraper", note: "切削砂土、黏土層之刮除式耐磨合金齒刀。" },
+      { cat: "machine", no: "05", jp: "コピーカッター", zh: "超挖刀 / 仿形刀", en: "Copy Cutter / Overcutter", note: "曲線轉彎或糾偏時向徑向伸縮伸出超挖之專用刀具。" },
+      { cat: "machine", no: "06", jp: "チャンバー (圧力室)", zh: "土壓艙 / 泥水艙", en: "Pressure Chamber", note: "刀盤後方維持水土壓力平衡之密閉艙室。" },
+      { cat: "machine", no: "07", jp: "圧力隔壁 (あつりょくかくへき)", zh: "隔壓壁", en: "Pressure Bulkhead", note: "將高壓艙室與常壓隧道內部隔離之高強厚鋼板壁。" },
+      { cat: "machine", no: "08", jp: "メインドライブ", zh: "主驅動系統", en: "Main Drive", note: "驅動刀盤旋轉之大扭矩馬達與齒輪傳動系統。" },
+      { cat: "machine", no: "09", jp: "主軸受 (しゅじくうけ)", zh: "大型主軸承", en: "Main Bearing", note: "承受刀盤巨大推力、扭矩與翻覆力矩之大直徑三排軸承。" },
+      { cat: "machine", no: "10", jp: "スクリューコンベア", zh: "螺旋輸送排土機", en: "Screw Conveyor", note: "將艙內碴土旋轉排至後方並形成降壓土塞效應之機構。" },
+      { cat: "machine", no: "11", jp: "排土ゲート (はいどゲート)", zh: "出土閘門 / 保壓門", en: "Discharge Gate", note: "螺旋輸送機後端控制出土流量與防噴湧之液壓保壓門。" },
+      { cat: "machine", no: "12", jp: "シールドジャッキ", zh: "推進千斤頂", en: "Thrust Jack / Cylinder", note: "推頂管片產生千噸前進推力之液壓油缸群。" },
+      { cat: "machine", no: "13", jp: "スプレッダーシュー", zh: "千斤頂頂靴 / 承壓墊", en: "Spreader Shoe", note: "千斤頂桿端與管片端面均勻接觸避免壓碎混凝土之靴板。" },
+      { cat: "machine", no: "14", jp: "セグメントエレクター", zh: "管片拼裝機 / 真圓組裝手", en: "Segment Erector", note: "盾尾內抓取管片並進行 360° 真圓組合成環之 6 自由度機構。" },
+      { cat: "machine", no: "15", jp: "テールシールブラシ", zh: "盾尾鋼絲刷 / 尾刷", en: "Tail Brush Seal", note: "盾尾內壁環狀排列阻隔地下水與灌漿液之鋼絲刷層。" },
+      { cat: "machine", no: "16", jp: "テールグリース", zh: "盾尾密封油脂", en: "Tail Seal Grease", note: "注入尾刷之間抵抗高壓水土與背填漿倒灌之專用黏彈油脂。" },
+      { cat: "machine", no: "17", jp: "中折れ機構 (なかおれきこう)", zh: "中折鉸接機構", en: "Articulation Joint", note: "前盾與中盾間之千斤頂鉸接，利於急曲線轉彎推進。" },
+      { cat: "machine", no: "18", jp: "後続台車 (こうぞくだいしゃ)", zh: "後續台車 / 支援台車", en: "Backup Gantry", note: "承載變壓器、控制室、泵浦與砂漿設備之軌道式台車組。" },
+      { cat: "machine", no: "19", jp: "マンロック (人閘)", zh: "人員進艙閘門", en: "Man Lock", note: "人員進入高壓土壓艙進行帶壓檢修更換刀具之氣密減壓艙。" },
+      { cat: "machine", no: "20", jp: "マッドポンプ (泥水ポンプ)", zh: "泥水輸送泵浦", en: "Slurry Pump", note: "泥水盾構中輸送進漿與抽送排泥渣之耐磨離心泵浦。" },
+      
+      // Category: civil
+      { cat: "civil", no: "21", jp: "発進立坑 (はっしんたてこう)", zh: "發進立坑 / 始發工作井", en: "Launch Shaft", note: "潛盾機組裝下坑並啟動破鏡出發之大型深基坑。" },
+      { cat: "civil", no: "22", jp: "到達立坑 (とうたつたてこう)", zh: "到達立坑 / 接收井", en: "Arrival Shaft / Reception Shaft", note: "潛盾機貫通出土接收並進行拆解吊離之立坑。" },
+      { cat: "civil", no: "23", jp: "地下連続壁 (ちかれんぞくへき)", zh: "地下連續壁", en: "Diaphragm Wall", note: "立坑深開挖圍護之鋼筋混凝土擋土止水重壁。" },
+      { cat: "civil", no: "24", jp: "鏡面 (きょうめん)", zh: "洞口鏡面 / 洞門壁", en: "Tunnel Portal / Eye Wall", note: "潛盾機發進出坑或到達貫通處之圍護連續壁牆面。" },
+      { cat: "civil", no: "25", jp: "鏡切り (かがみきり)", zh: "破鏡作業 / 洞門破除", en: "Breakthrough / Eye Demolition", note: "鑿除洞門鏡面混凝土與割斷鋼筋以利潛盾機切入之工序。" },
+      { cat: "civil", no: "26", jp: "地盤改良工 (じばんかいりょうこう)", zh: "地盤改良工程", en: "Ground Improvement", note: "在鏡面外地層進行超前固化止水以防流砂湧水之工法。" },
+      { cat: "civil", no: "27", jp: "高圧噴射撹拌工法 (JSG/RJP)", zh: "高壓噴射灌漿工法", en: "Jet Grouting", note: "以數十 MPa 高壓水氣切割土體並噴注水泥漿固化土層。" },
+      { cat: "civil", no: "28", jp: "薬液注入工 (やくえきちゅうにゅう)", zh: "化學藥液灌漿", en: "Chemical Grouting", note: "注入水玻璃或高分子藥液固結微細土粒與止水。" },
+      { cat: "civil", no: "29", jp: "凍結工法 (とうけつこうほう)", zh: "地盤凍結工法", en: "Ground Freezing Method", note: "埋設冷凍管循環低溫鹽水將周圍富水地層凍結成冰幕隔水。" },
+      { cat: "civil", no: "30", jp: "エントランスシール", zh: "洞口止水裝置 / 密封圈", en: "Entrance Seal", note: "洞門鋼圈內嵌之簾布橡膠圈與充氣氣囊，防止出發漏砂水。" },
+      { cat: "civil", no: "31", jp: "発進架台 (はっしんかだい)", zh: "發進基座 / 發進台架", en: "Launch Cradle", note: "立坑底版上精準定位承載潛盾機初始滑行之鋼結構台架。" },
+      { cat: "civil", no: "32", jp: "反力受け (はんりょくうけ)", zh: "發進反力架", en: "Reaction Frame", note: "架設於立坑後壁，承受初期推進千斤頂頂推力之鋼構架。" },
+      { cat: "civil", no: "33", jp: "仮セグメント (かりセグメント)", zh: "臨時負環 / 假管片", en: "Temporary Ring / Negative Ring", note: "初期掘進時拼裝於機尾與反力架之間傳遞推力之臨時管片。" },
+      { cat: "civil", no: "34", jp: "切梁支保工 (きりばりしほこう)", zh: "鋼管支撐 / 型鋼支撐", en: "Strut Supporting System", note: "立坑開挖時抵擋側向土水壓力之高強鋼管支撐梁。" },
+      { cat: "civil", no: "35", jp: "門形クレーン (もんがたクレーン)", zh: "門式起重機 / 門吊", en: "Gantry Crane", note: "立坑上方跨越吊運管片、出土斗車與重物之起重設備。" },
+
+      // Category: segment
+      { cat: "segment", no: "36", jp: "セグメント", zh: "襯砌管片 / 節塊", en: "Tunnel Segment", note: "預鑄鋼筋混凝土（RC）或鋼製之隧道圓形襯砌單元塊。" },
+      { cat: "segment", no: "37", jp: "標準ピース (Aセグメント)", zh: "標準管片塊 (A 塊)", en: "Standard Segment (A Piece)", note: "成環組裝中數量最多之矩形基準襯砌單元。" },
+      { cat: "segment", no: "38", jp: "隣接ピース (Bセグメント)", zh: "鄰接管片塊 (B 塊)", en: "Neighbor Segment (B Piece)", note: "位於標準塊與封頂塊之間，具有斜向插角的過渡管片。" },
+      { cat: "segment", no: "39", jp: "キーピース (Kセグメント)", zh: "封頂塊 / 楔形管片 (K 塊)", en: "Key Segment (K Piece)", note: "最後斜向插入閉合整環之楔形鎖緊關鍵塊。" },
+      { cat: "segment", no: "40", jp: "真円度 (しんえんど)", zh: "真圓度", en: "Roundness / Circularity", note: "管片成環後幾何直徑與理論真圓之偏差（公差 ≤ 0.5% D）。" },
+      { cat: "segment", no: "41", jp: "目違い (めちがい)", zh: "管片錯台 / 錯位", en: "Segment Misalignment / Step", note: "相鄰管片徑向或軸向未對齊所產生之階梯狀高低落差。" },
+      { cat: "segment", no: "42", jp: "止水ゴムシール (ガスケット)", zh: "止水橡膠墊圈 / 止水條", en: "Gasket Seal", note: "嵌裝於管片凹槽內，受擠壓密合防止地下水滲漏之彈性膠條。" },
+      { cat: "segment", no: "43", jp: "セグメントボルト", zh: "管片連接螺栓", en: "Segment Bolt", note: "穿過環向與軸向孔洞，將相鄰管片鎖緊成整體之高強螺栓。" },
+      { cat: "segment", no: "44", jp: "トルクレンチ", zh: "扭力扳手", en: "Torque Wrench", note: "鎖緊管片螺栓至規範指定扭矩值之校準量具。" },
+      { cat: "segment", no: "45", jp: "テーパーリング", zh: "斜面管片環 / 楔形環", en: "Taper Ring", note: "環寬一側寬一側窄之管片，用於拼裝隧道曲線半徑轉彎。" },
+      { cat: "segment", no: "46", jp: "テールボイド", zh: "建築空隙 / 盾尾間隙", en: "Tail Void", note: "潛盾外徑大於管片外徑，機體前進後周圍留下的環形環狀空隙。" },
+      { cat: "segment", no: "47", jp: "同時裏込注入 (どうじうらごめ)", zh: "同步背填灌漿", en: "Simultaneous Grouting", note: "潛盾機前進同時，自盾尾即刻向建築空隙注入砂漿填滿。" },
+      { cat: "segment", no: "48", jp: "注入率 (ちゅうにゅうりつ α)", zh: "灌漿注入率 (α)", en: "Grouting Ratio (Alpha)", note: "實際注入漿液體積與理論建築間隙體積之比率（常為 1.3~1.8）。" },
+      { cat: "segment", no: "49", jp: "2液型グラウト (A液/B液)", zh: "雙液型背填灌漿材料", en: "Two-component Grout", note: "A液（矽酸鈉/膠體）與B液（水泥漿/懸濁液）管口混和急結硬化。" },
+      { cat: "segment", no: "50", jp: "ゲルタイム", zh: "膠羽時間 / 凝結時間", en: "Gel Time", note: "雙液漿混合後流動性消失達到膠結狀態所需時間（數十秒）。" },
+
+      // Category: survey
+      { cat: "survey", no: "51", jp: "DTA (設計トンネル中心線)", zh: "設計隧道軸線 (DTA)", en: "Design Tunnel Axis", note: "工程設計規範規定之隧道幾何空間三維軸線座標。" },
+      { cat: "survey", no: "52", jp: "ピッチング (縦断角)", zh: "俯仰角 (Pitch)", en: "Pitching Angle", note: "潛盾機頭部相對於水平線之上仰或下俯角度。" },
+      { cat: "survey", no: "53", jp: "ローリング (回転角)", zh: "滾轉角 (Roll)", en: "Rolling Angle", note: "潛盾機機身繞本身前進軸線順時針或逆時針發生之自轉。" },
+      { cat: "survey", no: "54", jp: "ヨーイング (偏航角)", zh: "偏航角 (Yaw)", en: "Yawing Angle", note: "潛盾機前進方向水平偏左或偏右之方位轉角。" },
+      { cat: "survey", no: "55", jp: "トータルステーション", zh: "全測站儀", en: "Total Station", note: "光學測距與測角之自動化三維雷射量測儀器。" },
+      { cat: "survey", no: "56", jp: "ジャイロステーション", zh: "陀螺儀定向儀", en: "Gyro Station", note: "在地下不受磁場干擾，利用地球自轉精準測定真北方位之儀器。" },
+      { cat: "survey", no: "57", jp: "ELS (電子レーザーターゲット)", zh: "電子主動式雷射靶", en: "Electronic Laser Target", note: "安裝於機身內部接收雷射光束並即時輸出三維姿態數據之靶標。" },
+      { cat: "survey", no: "58", jp: "地表面沈下 (ちひょうめんちんか)", zh: "地表沉陷", en: "Surface Settlement", note: "隧道開挖引起上方地表土體之下沉變形量（容許值常 < 10mm）。" },
+      { cat: "survey", no: "59", jp: "盤膨れ (地盤隆起)", zh: "地盤隆起 / 冒漿", en: "Ground Heaving / Slurry Blowout", note: "艙壓過大或注漿超壓導致地表向上抬升或漿液衝出地面。" },
+      { cat: "survey", no: "60", jp: "土圧バランス (EPB)", zh: "土壓平衡工法", en: "Earth Pressure Balance (EPB)", note: "利用切削土碴填滿土壓艙受壓以平衡開挖面水土壓力之工法。" },
+      { cat: "survey", no: "61", jp: "泥水シールド (Slurry)", zh: "泥水加壓潛盾工法", en: "Slurry Shield", note: "開挖艙注入高壓泥漿並在開挖面形成泥膜以維持地層穩定之工法。" },
+      { cat: "survey", no: "62", jp: "インバート打設", zh: "仰拱混凝土澆置", en: "Invert Concrete Casting", note: "隧道底部圓弧處澆置回填平整混凝土，便於軌道與車行。" },
+      { cat: "survey", no: "63", jp: "連絡横坑 (れんらくおうこう)", zh: "聯絡橫坑 / 橫向通道", en: "Cross Passage", note: "相鄰兩座單線單孔隧道間每隔一定距離開挖之逃生維修通道。" },
+      { cat: "survey", no: "64", jp: "プラグ効果", zh: "土塞效應", en: "Soil Plug Effect", note: "碴土在螺旋輸送機筒內受擠壓密實形成阻隔高壓與高水之塞體。" },
+      { cat: "survey", no: "65", jp: "起泡剤 (フォーム)", zh: "發泡劑 / 泡沫改良劑", en: "Foaming Agent", note: "注入切削土中降低摩擦阻力、提升土體塑性流動性之界面活性劑。" },
+      { cat: "survey", no: "66", jp: "ベントナイト泥水", zh: "膨潤土泥漿", en: "Bentonite Slurry", note: "用於泥水平衡或土質改良之特製造漿懸浮黏土材料。" },
+      { cat: "survey", no: "67", jp: "蛇行 (だこう)", zh: "蛇行跑偏 / 軸線波浪", en: "Meandering", note: "推進控制不當導致機身繞設計軸線左右上下反覆波浪形前進。" },
+      { cat: "survey", no: "68", jp: "急曲線施工 (きゅうきょくせん)", zh: "急曲線小半徑推進", en: "Sharp Curve Tunneling", note: "半徑 R < 150m 之小轉彎半徑隧道推進技術，需利用中折與超挖。" },
+      { cat: "survey", no: "69", jp: "出水事故 (しゅっすいじこ)", zh: "突泥湧水事故", en: "Water Inrush Accident", note: "高壓地下水突破開挖面或盾尾刷倒灌淹沒隧道之重大災難。" },
+      { cat: "survey", no: "70", jp: "噴発 (ふんぱつ)", zh: "噴湧浩劫 (出土失控)", en: "Blow-out / Spewing", note: "高水壓穿越螺旋機縫隙使大量泥水混合物如火山噴湧失控。" },
+      { cat: "survey", no: "71", jp: "ずり出し (ズリ搬出)", zh: "出碴外運", en: "Muck Haulage / Spoil Removal", note: "將開挖產生的土石廢碴自洞內安全運送出坑之作業。" },
+      { cat: "survey", no: "72", jp: "土量配分比 (排土管理)", zh: "排土計量管理比", en: "Muck Volume Ratio", note: "每環實測排土重量與理論切削體積計算重量之對比值。" },
+      { cat: "survey", no: "73", jp: "坑内通気 (こうないつうき)", zh: "洞內通風排氣", en: "Tunnel Ventilation", note: "藉由大口徑風管持續輸送新鮮空氣並排出一氧化碳瓦斯氣體。" },
+      { cat: "survey", no: "74", jp: "ガス検知器", zh: "氣體偵測警報器", en: "Gas Detector", note: "監測坑內甲烷（CH4）、一氧化碳（CO）、硫化氫（H2S）之儀器。" },
+      { cat: "survey", no: "75", jp: "バッテリーロコ (機関車)", zh: "電瓶機車 / 牽引車", en: "Battery Locomotive", note: "洞內無軌排氣污染、由蓄電池供電在輕軌上牽引列車之機車。" },
+      { cat: "survey", no: "76", jp: "ズリトロ (土砂台車)", zh: "碴土斗車", en: "Muck Car / Hopper", note: "盛裝螺旋機排出土碴並由電瓶車拖運至立坑之箱型車斗。" },
+      { cat: "survey", no: "77", jp: "坑内レール (軽軌道)", zh: "施工輕軌軌道", en: "Tunnel Track / Light Rail", note: "隨潛盾機推進鋪設於管片底部之 24kg/30kg 臨時鋼軌線路。" },
+      { cat: "survey", no: "78", jp: "受変電キュービクル", zh: "高壓受變電箱", en: "Substation Cubicle", note: "將地面輸送之 3.3kV/11.4kV 高壓電降壓為動力電之配電箱。" },
+      { cat: "survey", no: "79", jp: "濁水処理装置", zh: "泥水排污分離處理設備", en: "Water Treatment Plant", note: "沉澱處理分離開挖泥水並符合環保排放水質之地面淨水設備。" },
+      { cat: "survey", no: "80", jp: "二次覆工 (にじふっこう)", zh: "二次襯砌", en: "Secondary Lining", note: "在一次管片襯砌內側澆置之現場混凝土平滑結構層。" }
+    ];
+
+    // -------------------------------------------------------------
+    // 5. App State & Interactive Controls
+    // -------------------------------------------------------------
+    let currentLang = 'bilingual';
+    let currentTheme = 'dark';
+    let currentPhase = 1;
+
+    // Component Select Handler
+    function selectPart(key) {
+      const data = componentData[key];
+      if (!data) return;
+
+      document.getElementById('comp-icon').textContent = data.icon;
+      document.getElementById('comp-title-jp').textContent = data.titleJp;
+      document.getElementById('comp-title-zh').textContent = data.titleZh;
+      document.getElementById('comp-category').textContent = data.category;
+      document.getElementById('comp-tag').textContent = data.tag;
+      document.getElementById('comp-structure').textContent = data.structure;
+      document.getElementById('comp-function').textContent = data.function;
+
+      const qaContainer = document.getElementById('comp-qa');
+      qaContainer.innerHTML = data.qa.map(q => `<div class="p-1.5 rounded bg-[var(--bg-card)] border border-[var(--border-color)]">${q}</div>`).join('');
+
+      const termsContainer = document.getElementById('comp-terms');
+      termsContainer.innerHTML = data.terms.map(t => `
+        <span class="px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">
+          <strong>${t.jp}</strong>: ${t.zh}
+        </span>
+      `).join('');
+    }
+
+    // Phase Stepper Select Handler
+    function selectPhase(pId) {
+      currentPhase = pId;
+      document.querySelectorAll('.phase-btn').forEach((btn, idx) => {
+        if (idx + 1 === pId) {
+          btn.classList.add('border-blue-500', 'bg-blue-500/15', 'text-blue-400');
+          btn.classList.remove('border-[var(--border-color)]', 'text-[var(--text-muted)]');
+        } else {
+          btn.classList.remove('border-blue-500', 'bg-blue-500/15', 'text-blue-400');
+          btn.classList.add('border-[var(--border-color)]', 'text-[var(--text-muted)]');
+        }
+      });
+
+      const pData = phaseData[pId];
+      if (!pData) return;
+
+      const container = document.getElementById('phase-content-area');
+      let html = `
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-[var(--border-color)] pb-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-blue-600 text-white shadow">${pData.badge}</span>
+              <h3 class="text-base md:text-lg font-black text-[var(--text-main)]">
+                <span class="lang-jp text-blue-300">${pData.titleJp}</span>
+                <span class="lang-zh block text-xs font-bold text-slate-400 mt-0.5">${pData.titleZh}</span>
+              </h3>
+            </div>
+            <p class="text-xs text-[var(--text-muted)] mt-1.5">
+              <span class="lang-jp">${pData.descJp}</span>
+              <span class="lang-zh block text-slate-400 mt-0.5">${pData.descZh}</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      `;
+
+      pData.steps.forEach(st => {
+        html += `
+          <div class="p-4 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)] hover:border-blue-500/60 transition-all space-y-2 shadow-sm">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <span class="w-6 h-6 rounded-md bg-blue-500/15 text-blue-400 font-mono font-bold text-xs flex items-center justify-center border border-blue-500/30">${st.num}</span>
+                <div>
+                  <h4 class="font-extrabold text-xs md:text-sm text-[var(--text-main)]">
+                    <span class="lang-jp text-blue-200">${st.nameJp}</span>
+                    <span class="lang-zh block text-[11px] text-slate-400 font-bold">${st.nameZh}</span>
+                  </h4>
+                </div>
+              </div>
+              <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">${st.keyPoint}</span>
+            </div>
+            
+            <p class="text-xs text-[var(--text-muted)] leading-relaxed pl-8">
+              <span class="lang-jp">${st.detailJp}</span>
+              <span class="lang-zh block text-slate-400 text-[11px] mt-1 border-t border-[var(--border-color)]/50 pt-1">${st.detailZh}</span>
+            </p>
+          </div>
+        `;
+      });
+
+      html += `</div>`;
+      container.innerHTML = html;
+    }
+
+    // Tab Navigation
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-500/20');
+        btn.classList.add('text-[var(--text-muted)]');
+      });
+
+      const activePanel = document.getElementById(`tab-content-${tabId}`);
+      const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+      if (activePanel) activePanel.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.add('bg-blue-600', 'text-white', 'shadow-lg', 'shadow-blue-500/20');
+        activeBtn.classList.remove('text-[var(--text-muted)]');
+      }
+    }
+
+    // Language Toggle
+    function setLang(mode) {
+      currentLang = mode;
+      document.body.classList.remove('lang-bilingual', 'lang-jp-only', 'lang-zh-only');
+      
+      const bBtn = document.getElementById('lang-btn-bilingual');
+      const jBtn = document.getElementById('lang-btn-jp');
+      const zBtn = document.getElementById('lang-btn-zh');
+
+      [bBtn, jBtn, zBtn].forEach(b => {
+        b.classList.remove('bg-blue-600', 'text-white', 'shadow');
+        b.classList.add('text-[var(--text-muted)]');
+      });
+
+      if (mode === 'bilingual') {
+        document.body.classList.add('lang-bilingual');
+        bBtn.classList.add('bg-blue-600', 'text-white', 'shadow');
+        bBtn.classList.remove('text-[var(--text-muted)]');
+      } else if (mode === 'jp') {
+        document.body.classList.add('lang-jp-only');
+        jBtn.classList.add('bg-blue-600', 'text-white', 'shadow');
+        jBtn.classList.remove('text-[var(--text-muted)]');
+      } else if (mode === 'zh') {
+        document.body.classList.add('lang-zh-only');
+        zBtn.classList.add('bg-blue-600', 'text-white', 'shadow');
+        zBtn.classList.remove('text-[var(--text-muted)]');
+      }
+    }
+
+    // Theme Toggle
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      currentTheme = isLight ? 'light' : 'dark';
+      document.getElementById('theme-btn').textContent = isLight ? '☀️' : '🌙';
+    }
+
+    // Backfill Grouting Calculator
+    function calcGrout() {
+      const D = parseFloat(document.getElementById('calc-D').value) || 6.47;
+      const d = parseFloat(document.getElementById('calc-d').value) || 6.20;
+      const B = parseFloat(document.getElementById('calc-B').value) || 1.20;
+      const alpha = parseFloat(document.getElementById('calc-alpha').value) || 1.50;
+
+      const v0 = (Math.PI / 4) * (Math.pow(D, 2) - Math.pow(d, 2)) * B;
+      const q = v0 * alpha;
+
+      document.getElementById('res-v0').textContent = v0.toFixed(2);
+      document.getElementById('res-q').textContent = q.toFixed(2);
+      document.getElementById('res-liters').textContent = (q * 1000).toLocaleString('en-US', { maximumFractionDigits: 0 });
+    }
+
+    // Render Multi-Trade Matrix Table
+    function renderMatrixTable() {
+      const tbody = document.getElementById('matrix-table-body');
+      tbody.innerHTML = matrixData.map(m => `
+        <tr class="hover:bg-[var(--bg-card-hover)]/40 transition-colors">
+          <td class="p-3 font-bold">
+            <span class="text-blue-300 block">${m.tradeJp}</span>
+            <span class="text-slate-400 text-[11px] block mt-0.5">${m.tradeZh}</span>
+          </td>
+          <td class="p-3">
+            <span class="text-slate-200 block">${m.dutyJp}</span>
+            <span class="text-slate-400 text-[11px] block mt-0.5">${m.dutyZh}</span>
+          </td>
+          <td class="p-3">
+            <span class="text-cyan-300 block">${m.upstreamJp}</span>
+            <span class="text-slate-400 text-[11px] block mt-0.5">${m.upstreamZh}</span>
+          </td>
+          <td class="p-3">
+            <span class="text-emerald-300 block">${m.downstreamJp}</span>
+            <span class="text-slate-400 text-[11px] block mt-0.5">${m.downstreamZh}</span>
+          </td>
+          <td class="p-3 text-rose-300">
+            <span class="block">${m.riskJp}</span>
+            <span class="text-rose-400/80 text-[11px] block mt-0.5">${m.riskZh}</span>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // Render Glossary Table
+    let currentGlossaryCategory = 'all';
+    function renderGlossaryTable(filter = 'all') {
+      currentGlossaryCategory = filter;
+      const tbody = document.getElementById('glossary-table-body');
+      const filtered = (filter === 'all') ? glossaryData : glossaryData.filter(g => g.cat === filter);
+
+      tbody.innerHTML = filtered.map(g => `
+        <tr class="hover:bg-[var(--bg-card-hover)]/40 transition-colors">
+          <td class="p-3 font-mono text-slate-500">${g.no}</td>
+          <td class="p-3 font-bold text-blue-300">${g.jp}</td>
+          <td class="p-3 font-semibold text-slate-200">${g.zh}</td>
+          <td class="p-3 font-mono text-cyan-400">${g.en}</td>
+          <td class="p-3 text-xs leading-relaxed text-[var(--text-muted)]">${g.note}</td>
+        </tr>
+      `).join('');
+    }
+
+    function filterGlossary(cat) {
+      document.querySelectorAll('.gloss-filter-btn').forEach(b => {
+        b.classList.remove('bg-blue-600', 'text-white');
+        b.classList.add('bg-[var(--bg-main)]', 'text-[var(--text-muted)]');
+      });
+      event.target.classList.remove('bg-[var(--bg-main)]', 'text-[var(--text-muted)]');
+      event.target.classList.add('bg-blue-600', 'text-white');
+      renderGlossaryTable(cat);
+    }
+
+    // Global Search Across Glossary, Components, and Steps
+    function handleSearch(query) {
+      query = query.trim().toLowerCase();
+      const resultsPanel = document.getElementById('search-results-panel');
+      const clearBtn = document.getElementById('clear-search-btn');
+      const list = document.getElementById('search-results-list');
+
+      if (!query) {
+        resultsPanel.classList.add('hidden');
+        clearBtn.classList.add('hidden');
+        return;
+      }
+
+      clearBtn.classList.remove('hidden');
+      resultsPanel.classList.remove('hidden');
+
+      let matches = [];
+
+      // 1. Search in glossary
+      glossaryData.forEach(g => {
+        if (g.jp.toLowerCase().includes(query) || g.zh.toLowerCase().includes(query) || g.en.toLowerCase().includes(query) || g.note.toLowerCase().includes(query)) {
+          matches.push({
+            type: "用語 (Glossary)",
+            title: `${g.jp} / ${g.zh}`,
+            subtitle: g.en,
+            desc: g.note,
+            action: () => { switchTab('dialogue'); renderGlossaryTable('all'); }
+          });
+        }
+      });
+
+      // 2. Search in components
+      Object.keys(componentData).forEach(k => {
+        const c = componentData[k];
+        if (c.titleJp.toLowerCase().includes(query) || c.titleZh.toLowerCase().includes(query) || c.structure.toLowerCase().includes(query) || c.function.toLowerCase().includes(query)) {
+          matches.push({
+            type: "構造 (Anatomy)",
+            title: `${c.titleJp} (${c.titleZh})`,
+            subtitle: c.category,
+            desc: c.structure.substring(0, 70) + "...",
+            action: () => { switchTab('machine'); selectPart(k); }
+          });
+        }
+      });
+
+      // 3. Search in sequence steps
+      Object.keys(phaseData).forEach(pKey => {
+        const p = phaseData[pKey];
+        p.steps.forEach(st => {
+          if (st.nameJp.toLowerCase().includes(query) || st.nameZh.toLowerCase().includes(query) || st.detailJp.toLowerCase().includes(query) || st.detailZh.toLowerCase().includes(query)) {
+            matches.push({
+              type: `工程 (${p.badge})`,
+              title: `[${st.num}] ${st.nameJp} / ${st.nameZh}`,
+              subtitle: st.keyPoint,
+              desc: st.detailJp.substring(0, 70) + "...",
+              action: () => { switchTab('sequence'); selectPhase(parseInt(pKey)); }
+            });
+          }
+        });
+      });
+
+      document.getElementById('search-count').textContent = `${matches.length} 項`;
+
+      if (matches.length === 0) {
+        list.innerHTML = `<div class="col-span-2 text-center py-6 text-slate-400">查無與「${query}」相符之項目，請嘗試其他關鍵字。</div>`;
+      } else {
+        list.innerHTML = matches.slice(0, 20).map((m, idx) => `
+          <div onclick="executeSearchAction(${idx})" class="p-3 rounded-xl bg-[var(--bg-main)] border border-[var(--border-color)] hover:border-blue-500 cursor-pointer transition-all space-y-1">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/15 text-blue-400 font-bold">${m.type}</span>
+              <span class="text-[10px] text-slate-500 font-mono">${m.subtitle}</span>
+            </div>
+            <div class="font-bold text-xs text-[var(--text-main)]">${m.title}</div>
+            <div class="text-[11px] text-[var(--text-muted)] line-clamp-2">${m.desc}</div>
+          </div>
+        `).join('');
+        window._currentSearchMatches = matches;
+      }
+    }
+
+    function executeSearchAction(idx) {
+      if (window._currentSearchMatches && window._currentSearchMatches[idx]) {
+        window._currentSearchMatches[idx].action();
+        document.getElementById('search-results-panel').classList.add('hidden');
+      }
+    }
+
+    function clearSearch() {
+      document.getElementById('global-search').value = '';
+      handleSearch('');
+    }
+
+    // Initialize Default State
+    document.addEventListener('DOMContentLoaded', () => {
+      selectPart('cutterhead');
+      selectPhase(1);
+      calcGrout();
+      renderMatrixTable();
+      renderGlossaryTable('all');
+    });
+  </script>
+</body>
+</html>
